@@ -5,13 +5,15 @@ sources:
   type: local
   writeable: true
   filters: null
-- alias: poo
-  target: https://github.com/qxcodepoo/arcade.git
+- alias: fup
+  target: https://github.com/qxcodefup/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-03 14:00:46'
+  cache_timestamp: '2026-03-03 14:39:21'
   filters: null
-expanded: []
+expanded:
+- fup@campanha-principal
+- fup@missão-operações
 tasks: {}
 flags:
   painel: 0
@@ -20,5 +22,5 @@ flags:
   tasks: 0
   task_graph_mode: 0
   show_time: 0
-lang: py
-selected: poo@campanha-principal
+lang: go
+selected: fup@tres
