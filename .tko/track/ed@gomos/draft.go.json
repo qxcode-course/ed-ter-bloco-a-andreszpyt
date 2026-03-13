@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_19-17-18",
+            "content": "@@ -514,124 +514,7 @@\n y%0A%09%7D\n-%0A%0A%09for i, v := range gomos %7B%0A%09%09if i %3E 0 %7B%0A%09%09%09fmt.Printf(%22 %22)%0A%09%09%7D%0A%09%09fmt.Printf(%22%25d %25d%22, v.x, v.y)%0A%09%7D%0A%09fmt.Printf(%22%5Cn%22)\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-13_19-20-29",
+            "content": "@@ -439,20 +439,16 @@\n n(gomos)\n- - 1\n ; i %3E 1;\n@@ -598,10 +598,8 @@\n d %25d\n-%5Cn\n %22, v\n@@ -610,10 +610,28 @@\n v.y)%0A%09%7D%0A\n+%09fmt.Printf(%22%5Cn%22)%0A\n %7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-13_19-21-18",
+            "content": "@@ -243,75 +243,8 @@\n %09%7D%0A%0A\n-%09for i := len(gomos) - 1; i %3E 0; i-- %7B%0A%09%09gomos%5Bi%5D = gomos%5Bi-1%5D%0A%09%7D%0A%0A\n %09swi\n@@ -419,16 +419,113 @@\n - 1%0A%09%7D%0A%0A\n+%09for i := len(gomos) - 1; i %3E 1; i-- %7B%0A%09%09gomos%5Bi%5D.x, gomos%5Bi%5D.y = gomos%5Bi-1%5D.x, gomos%5Bi-1%5D.y%0A%09%7D%0A%0A\n %09for i, \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-13_19-29-34",
+            "content": "@@ -95,24 +95,25 @@\n te%0A%09\n-var \n gomos\n+ :=\n  %5B%5DPair\n+%7B%7D\n %0A%0A%09f\n@@ -243,29 +243,8 @@\n %09%7D%0A%0A\n-%09cabeca := gomos%5B0%5D%0A%0A\n %09for\n@@ -490,53 +490,8 @@\n %09%7D%0A%0A\n-%09if len(gomos) %3E 1 %7B%0A%09%09gomos%5B1%5D = cabeca%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-13_19-31-57",
+            "content": "@@ -578,16 +578,52 @@\n gomos %7B%0A\n+%09%09if i %3E 0 %7B%0A%09%09%09fmt.Printf(%22 %22)%0A%09%09%7D%0A\n %09%09fmt.Pr\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-13_19-33-45",
+            "content": "@@ -560,9 +560,9 @@\n for \n-_\n+i\n , v \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-13_19-34-41",
+            "content": "@@ -89,14 +89,12 @@\n r d \n-string\n+byte\n %0A%09va\n@@ -348,11 +348,11 @@\n ase \n-%22L%22\n+'L'\n :%0A%09%09\n@@ -389,11 +389,11 @@\n ase \n-%22R%22\n+'R'\n :%0A%09%09\n@@ -430,11 +430,11 @@\n ase \n-%22D%22\n+'D'\n :%0A%09%09\n@@ -471,11 +471,11 @@\n ase \n-%22U%22\n+'U'\n :%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-13_19-37-27",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Pair struct {\n\tx, y int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tvar gomos []Pair\n\n\tfmt.Scan(&q)\n\tfmt.Scan(&d)\n\n\tfor i := 0; i < q; i++ {\n\t\tvar x, y int\n\t\tfmt.Scan(&x, &y)\n\t\tgomos = append(gomos, Pair{x, y})\n\t}\n\n\tcabeca := gomos[0]\n\n\tfor i := len(gomos) - 1; i > 0; i-- {\n\t\tgomos[i] = gomos[i-1]\n\t}\n\n\tswitch d {\n\tcase \"L\":\n\t\tgomos[0].x = gomos[0].x - 1\n\tcase \"R\":\n\t\tgomos[0].x = gomos[0].x + 1\n\tcase \"D\":\n\t\tgomos[0].y = gomos[0].y + 1\n\tcase \"U\":\n\t\tgomos[0].y = gomos[0].y - 1\n\t}\n\n\tif len(gomos) > 1 {\n\t\tgomos[1] = cabeca\n\t}\n\n\tfor _, v := range gomos {\n\t\tfmt.Printf(\"%d %d\\n\", v.x, v.y)\n\t}\n}\n",
+            "lines": "47"
+        }
+    ]
+}

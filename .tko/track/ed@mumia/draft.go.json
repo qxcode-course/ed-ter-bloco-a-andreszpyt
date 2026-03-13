@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_09-17-57",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,292 +37,32 @@\n ) %7B%0A\n-%09var s string%0A%09var n int%0A%0A%09fmt.Scan(&s, &n)%0A%0A%09if n %3C 12 %7B%0A%09%09fmt.Println(s, %22 eh crianca%22)%0A%09%7D else if n %3C 18 %7B%0A%09%09fmt.Println(s, %22 eh jovem%22)%0A%09%7D else if n %3C 65 %7B%0A%09%09fmt.Println(s, %22 eh adulto%22)%0A%09%7D else if n %3C 1000 %7B%0A%09%09fmt.Println(s, %22 eh idoso%22)%0A%09%7D else %7B%0A%09%09fmt.Println(s, %22 eh mumia%22)%0A%09%7D\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-13_09-29-22",
+            "content": "@@ -111,16 +111,17 @@\n tln(s, %22\n+ \n eh crian\n@@ -163,16 +163,17 @@\n tln(s, %22\n+ \n eh jovem\n@@ -213,16 +213,17 @@\n tln(s, %22\n+ \n eh adult\n@@ -266,16 +266,17 @@\n tln(s, %22\n+ \n eh idoso\n@@ -306,16 +306,17 @@\n tln(s, %22\n+ \n eh mumia\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-13_09-30-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar s string\n\tvar n int\n\n\tfmt.Scan(&s, &n)\n\n\tif n < 12 {\n\t\tfmt.Println(s, \"eh crianca\")\n\t} else if n < 18 {\n\t\tfmt.Println(s, \"eh jovem\")\n\t} else if n < 65 {\n\t\tfmt.Println(s, \"eh adulto\")\n\t} else if n < 1000 {\n\t\tfmt.Println(s, \"eh idoso\")\n\t} else {\n\t\tfmt.Println(s, \"eh mumia\")\n\t}\n}\n",
+            "lines": "22"
+        }
+    ]
+}

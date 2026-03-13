@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_09-40-44",
+            "content": "@@ -87,31 +87,45 @@\n )%0A%0A%09\n-for %7B%0A%09%09if f ==\n+if d == 1 %7B%0A%09%09if p %3E f && h %3E\n  p %7B%0A%09%09%09\n prin\n@@ -124,18 +124,23 @@\n %0A%09%09%09\n-p\n+fmt.P\n rint\n-ln\n+f\n (%22N\n+%5Cn\n %22)%0A%09\n@@ -156,24 +156,8 @@\n %09%09%7D%0A\n-%0A%09%09if f == h %7B%0A%09\n %09%09pr\n@@ -173,84 +173,113 @@\n )%0A%09%09\n-%09\n return%0A\n-%09\n %09%7D%0A%0A%09\n-%09f += d%0A%0A%09%09if f %3E 15 %7B%0A%09%09%09f = 0%0A%09%09%7D%0A%09%09if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D\n+if d == -1 %7B%0A%09%09if p %3E f && h %3E p %7B%0A%09%09%09fmt.Printf(%22S%5Cn%22)%0A%09%09%09return%0A%09%09%7D%0A%09%09println(%22N%22)%0A%09%09return\n %0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-13_09-46-31",
+            "content": "@@ -102,29 +102,25 @@\n f == p %7B%0A%09%09%09\n-fmt.P\n+p\n rintln(%22N%22)%0A\n@@ -155,13 +155,9 @@\n %0A%09%09%09\n-fmt.P\n+p\n rint\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-13_09-47-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int\n\tfmt.Scan(&h, &p, &f, &d)\n\n\tfor {\n\t\tif f == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\treturn\n\t\t}\n\n\t\tif f == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\treturn\n\t\t}\n\n\t\tf += d\n\n\t\tif f > 15 {\n\t\t\tf = 0\n\t\t}\n\t\tif f < 0 {\n\t\t\tf = 15\n\t\t}\n\t}\n}\n",
+            "lines": "29"
+        }
+    ]
+}
