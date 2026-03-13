@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_10-57-35",
+            "content": "@@ -51,83 +51,47 @@\n nt%0A%09\n-menor := 1000%0A%09var win bool\n+var d %5Bn%5Dint\n %0A%09var \n-x\n+min\n  int%0A\n-%0A%09fmt.Scan(&n)%0A%0A%09d := make(%5B%5Dint, n)\n+%09var win bool\n %0A%0A%09f\n@@ -290,35 +290,19 @@\n  %3C m\n-enor\n+in\n  %7B%0A%09%09%09m\n-enor = d%5Bi%5D%0A%09%09%09x\n+in\n  = i\n@@ -360,13 +360,11 @@\n tln(\n-x + 1\n+min\n )%0A%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-13_11-02-54",
+            "content": "@@ -409,16 +409,20 @@\n rintln(x\n+ + 1\n )%0A%09%09retu\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-13_11-03-22",
+            "content": "@@ -226,20 +226,8 @@\n  -1%0A\n-%09%09%09continue%0A\n %09%09%7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-13_11-05-55",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tmenor := 1000\n\tvar win bool\n\tvar x int\n\n\tfmt.Scan(&n)\n\n\td := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tvar a, b int\n\t\tfmt.Scan(&a, &b)\n\n\t\tif a < 10 || b < 10 {\n\t\t\td[i] = -1\n\t\t\tcontinue\n\t\t}\n\n\t\tif a > b {\n\t\t\td[i] = a - b\n\t\t}\n\n\t\tif b > a {\n\t\t\td[i] = b - a\n\t\t}\n\n\t\tif d[i] != -1 && d[i] < menor {\n\t\t\tmenor = d[i]\n\t\t\tx = i\n\t\t\twin = true\n\t\t}\n\t}\n\n\tif win == true {\n\t\tfmt.Println(x)\n\t\treturn\n\t}\n\n\tfmt.Println(\"sem ganhador\")\n}\n",
+            "lines": "45"
+        }
+    ]
+}

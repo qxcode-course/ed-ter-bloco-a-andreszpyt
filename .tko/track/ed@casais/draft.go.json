@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-13_14-07-10",
+            "content": "@@ -280,18 +280,18 @@\n %5Banimal%5D\n-++\n+--\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-13_14-07-59",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tdescasados := make(map[int]int)\n\tpares := 0\n\n\tfor i := 0; i < n; i++ {\n\t\tvar animal int\n\t\tfmt.Scan(&animal)\n\n\t\tpar := -animal\n\n\t\tif descasados[par] > 0 {\n\t\t\tpares++\n\t\t\tdescasados[par]--\n\t\t} else {\n\t\t\tdescasados[animal]++\n\t\t}\n\t}\n\tfmt.Println(pares)\n}\n",
+            "lines": "26"
+        }
+    ]
+}
