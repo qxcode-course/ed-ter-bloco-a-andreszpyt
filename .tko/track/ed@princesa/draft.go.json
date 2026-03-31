@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-18_11-14-03",
+            "content": "@@ -157,105 +157,25 @@\n  = i\n- + 1%0A%09%7D%0A%0A%09index := 0\n+%0A%09%7D%0A\n %0A%09for i\n-, p\n  := \n-range pessoa %7B%0A%09%09if p == e %7B%0A%09%09%09index = i%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%0A%09for\n+e;\n  len\n@@ -185,17 +185,18 @@\n ssoa) %3E \n-0\n+1;\n  %7B%0A%09%09fmt\n@@ -217,11 +217,8 @@\n %09for\n- i,\n  j :\n@@ -244,18 +244,30 @@\n %09if \n-i == index\n+pessoa%5Bj%5D == pessoa%5Bi%5D\n  %7B%0A%09\n@@ -285,30 +285,26 @@\n tf(%22\n+%3E \n %25d\n-%3E\n  %22, \n-j)%0A%09%09%09%09continue\n+pessoa%5Bj%5D)\n %0A%09%09%09\n@@ -326,17 +326,25 @@\n (%22%25d %22, \n-j\n+pessoa%5Bj%5D\n )%0A%09%09%7D%0A%09%09\n@@ -365,82 +365,8 @@\n %22)%0A%0A\n-%09%09if len(pessoa) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09kill := (index + 1) %25 len(pessoa)%0A\n %09%09pe\n@@ -388,20 +388,17 @@\n essoa%5B0:\n-kill\n+i\n %5D, pesso\n@@ -399,20 +399,17 @@\n  pessoa%5B\n-kill\n+i\n +1:%5D...)\n@@ -413,37 +413,8 @@\n ..)%0A\n-%09%09index = kill %25 len(pessoa)%0A\n %09%7D%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-18_11-38-37",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar e int\n\tfmt.Scan(&n)\n\tfmt.Scan(&e)\n\n\tpessoa := make([]int, n)\n\n\tfor i := range pessoa {\n\t\tpessoa[i] = i + 1\n\t}\n\n\tindex := 0\n\tfor i, p := range pessoa {\n\t\tif p == e {\n\t\t\tindex = i\n\t\t\tbreak\n\t\t}\n\t}\n\n\tfor len(pessoa) > 0 {\n\t\tfmt.Print(\"[ \")\n\t\tfor i, j := range pessoa {\n\t\t\tif i == index {\n\t\t\t\tfmt.Printf(\"%d> \", j)\n\t\t\t\tcontinue\n\t\t\t}\n\t\t\tfmt.Printf(\"%d \", j)\n\t\t}\n\t\tfmt.Println(\"]\")\n\n\t\tif len(pessoa) == 1 {\n\t\t\tbreak\n\t\t}\n\n\t\tkill := (index + 1) % len(pessoa)\n\t\tpessoa = append(pessoa[0:kill], pessoa[kill+1:]...)\n\t\tindex = kill % len(pessoa)\n\t}\n}\n",
+            "lines": "44"
+        }
+    ]
+}
