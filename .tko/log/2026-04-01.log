@@ -1,0 +1,14 @@
+2026-04-01 10:31:59, SELF, v:1, k:ed@princesa, self:1, rate:100, study:60, concept:1
+2026-04-01 10:32:47, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-01 10:33:07, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100
+2026-04-01 10:33:20, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-01 10:33:49, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:90
+2026-04-01 10:33:52, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-01 10:42:37, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:148
+2026-04-01 10:43:05, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:149
+2026-04-01 10:46:10, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:153
+2026-04-01 10:46:36, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:153
+2026-04-01 10:49:00, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:165
+2026-04-01 10:49:34, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:165
+2026-04-01 11:06:33, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-01 11:06:47, MOVE, v:1, k:ed@triangulo, mode:DOWN

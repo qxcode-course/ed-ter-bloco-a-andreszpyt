@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_10-42-37",
+            "content": "@@ -285,38 +285,20 @@\n %7B%0A%09%09\n-abs := abs(vet%5Bi%5D)%0A%09%09count%5Babs\n+count%5Bvet%5Bi%5D\n %5D++%0A\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-04-01_10-43-05",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -407,90 +407,8 @@\n %0A%09%7D%0A\n-%09sort.Slice(pairs, func(i, j int) bool %7B%0A%09%09return pairs%5Bi%5D.One %3E pairs%5Bj%5D.One%0A%09%7D)%0A\n %09ret\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-04-01_10-46-10",
+            "content": "@@ -474,17 +474,17 @@\n %5Bi%5D.One \n-%3C\n+%3E\n  pairs%5Bj\n",
+            "lines": "153"
+        },
+        {
+            "label": "2026-04-01_10-46-36",
+            "content": "@@ -546,299 +546,27 @@\n  %7B%0A%09\n-count := make(map%5Bint%5Dint)%0A%09for i := 0; i %3C len(vet); i++ %7B%0A%09%09if vet%5Bi+1%5D == vet%5Bi%5D %7B%0A%09%09%09count%5Bvet%5Bi%5D%5D++%0A%09%09%7D%0A%09%7D%0A%09var pairs %5B%5DPair%0A%09for k, v := range count %7B%0A%09%09pairs = append(pairs, Pair%7Bv, k%7D)%0A%09%7D%0A%09sort.Slice(pairs, func(i, j int) bool %7B%0A%09%09return pairs%5Bi%5D.One %3C pairs%5Bj%5D.One%0A%09%7D)%0A%09return pairs\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "153"
+        },
+        {
+            "label": "2026-04-01_10-49-00",
+            "content": "@@ -610,24 +610,8 @@\n %09%09if\n- i %3C len(vet) &&\n  vet\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-01_10-49-34",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc abs(number int) int {\n\tif number < 0 {\n\t\treturn -number\n\t}\n\treturn number\n}\n\nfunc occurr(vet []int) []Pair {\n\tcount := make(map[int]int)\n\n\tfor i := 0; i < len(vet); i++ {\n\t\tabs := abs(vet[i])\n\t\tcount[abs]++\n\t}\n\tvar pairs []Pair\n\n\tfor k, v := range count {\n\t\tpairs = append(pairs, Pair{k, v})\n\t}\n\tsort.Slice(pairs, func(i, j int) bool {\n\t\treturn pairs[i].One < pairs[j].One\n\t})\n\treturn pairs\n}\n\nfunc teams(vet []int) []Pair {\n\tcount := make(map[int]int)\n\tfor i := 0; i < len(vet); i++ {\n\t\tif i < len(vet) && vet[i+1] == vet[i] {\n\t\t\tcount[vet[i]]++\n\t\t}\n\t}\n\tvar pairs []Pair\n\tfor k, v := range count {\n\t\tpairs = append(pairs, Pair{v, k})\n\t}\n\tsort.Slice(pairs, func(i, j int) bool {\n\t\treturn pairs[i].One < pairs[j].One\n\t})\n\treturn pairs\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\t_ = vet\n\t_ = posList\n\treturn nil\n}\n\nfunc clear(vet []int, value int) []int {\n\t_ = vet\n\t_ = value\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "165"
+        }
+    ]
+}

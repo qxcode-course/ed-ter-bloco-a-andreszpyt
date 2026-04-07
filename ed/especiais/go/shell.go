@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -21,15 +22,38 @@ func abs(number int) int {
 }
 
 func occurr(vet []int) []Pair {
-	
-	for i := 0; i < len(vet); i++ {
+	count := make(map[int]int)
 
+	for i := 0; i < len(vet); i++ {
+		abs := abs(vet[i])
+		count[abs]++
 	}
+	var pairs []Pair
+
+	for k, v := range count {
+		pairs = append(pairs, Pair{k, v})
+	}
+	sort.Slice(pairs, func(i, j int) bool {
+		return pairs[i].One < pairs[j].One
+	})
+	return pairs
 }
 
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	count := make(map[int]int)
+	for i := 0; i < len(vet); i++ {
+		if i < len(vet) && vet[i+1] == vet[i] {
+			count[vet[i]]++
+		}
+	}
+	var pairs []Pair
+	for k, v := range count {
+		pairs = append(pairs, Pair{v, k})
+	}
+	sort.Slice(pairs, func(i, j int) bool {
+		return pairs[i].One < pairs[j].One
+	})
+	return pairs
 }
 
 func mnext(vet []int) []int {

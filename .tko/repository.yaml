@@ -2,18 +2,21 @@ version: '0.2'
 sources:
 - name: sandbox
   target: sandbox
+  index: README.md
   type: local
   writeable: true
   quests: null
   tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
+  index: README.md
   type: git
   writeable: false
   quests: null
   tasks: null
 expanded:
-- ed@map_set
+- ed@vector
+- ed@rec
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, concept:1}'
@@ -22,15 +25,92 @@ tasks:
   ed@casais: '{self:1, rate:100, study:15}'
   ed@baruel: '{self:1, rate:100, study:25}'
   ed@gomos: '{self:1, rate:100, study:50, concept:1}'
-  ed@princesa: '{self:1, rate:100, study:60, concept:1, debug:1}'
+  ed@princesa: '{self:1, rate:100, study:60, concept:1}'
   ed@apagando: '{self:1, rate:100, study:50}'
-  ed@manipulacao: '{rate:85}'
+  ed@manipulacao: '{self:1, rate:100, study:90}'
+  ed@especiais: '{rate:12}'
+  ed@triangulo: '{self:1, rate:100, study:30, concept:1}'
+  ed@treinando: '{self:1, rate:100, study:60, concept:1, debug:1}'
+  ed@resto: '{self:1, rate:100, study:15}'
+  ed@mdc: '{self:1, rate:100, study:10, refactor:1}'
+  ed@queimada: '{self:1, rate:100, study:12}'
+  ed@eh_primo: '{self:1, rate:100, study:10}'
+  ed@vetequals: '{self:1, rate:100, study:20, concept:1, debug:1}'
+  ed@priminhos: '{rate:25}'
+  ed@buscas: '{}'
+  ed@rotacoes: '{}'
+  ed@alternando: '{}'
+  ed@labirinto: '{}'
+  ed@enesimo: '{}'
+  ed@escada: '{}'
+  ed@binomiais: '{}'
+  ed@diagonal: '{}'
+  ed@sufixos: '{}'
+  ed@padroes1: '{}'
+  ed@padroes2: '{}'
+  ed@padroes3: '{}'
+  ed@quadrado: '{}'
+  ed@fib1: '{}'
+  ed@fib2: '{}'
+  ed@santo: '{}'
+  ed@bitcoin: '{}'
+  ed@fractais_png: '{}'
+  ed@fractais: '{}'
+  ed@wordsearch: '{}'
+  ed@subset_sum: '{}'
+  ed@distancia: '{}'
+  ed@permutacoes: '{}'
+  ed@sudoku: '{}'
+  ed@n_rainhas: '{}'
+  ed@vetbuild: '{}'
+  ed@setbuild: '{}'
+  ed@bettersearch: '{}'
+  ed@multiset: '{}'
+  ed@magicsearch: '{}'
+  ed@iterador: '{}'
+  ed@lista_d1: '{}'
+  ed@lista_d2: '{}'
+  ed@lista_d4: '{}'
+  ed@prin_list1: '{}'
+  ed@lista_d3: '{}'
+  ed@prin_list2: '{}'
+  ed@editor: '{}'
+  ed@controlz: '{}'
+  ed@editorint: '{}'
+  ed@bufferring: '{}'
+  ed@fila_enc: '{}'
+  ed@pilha: '{}'
+  ed@chaves: '{}'
+  ed@queimando: '{}'
+  ed@pilhado: '{}'
+  ed@balanceada: '{}'
+  ed@caminhao: '{}'
+  ed@polonesa: '{}'
+  ed@serial: '{}'
+  ed@formatada: '{}'
+  ed@inverter: '{}'
+  ed@clonar: '{}'
+  ed@soma: '{}'
+  ed@altura: '{}'
+  ed@compare: '{}'
+  ed@arvore-path: '{}'
+  ed@bst_insert: '{}'
+  ed@bst_serial: '{}'
+  ed@bst_remove: '{}'
+  ed@ilhas: '{}'
+  ed@cercado: '{}'
+  ed@pintura: '{}'
+  ed@longest: '{}'
+  ed@battleship: '{}'
+  ed@rotten: '{}'
+  ed@caminho: '{}'
+  ed@detonate: '{}'
+  ed@escapeSpread: '{}'
 flags:
-  panel: 0
-  inbox: 0
-  show_panel: 0
-  tasks: 0
-  task_graph_mode: 0
-  show_time: 0
+  inbox: inbox
+  panel: help
+  show_panel: 'true'
+  task_graph_mode: executions
+  show_time: 'true'
 lang: go
-selected: ed@manipulacao
+selected: ed@fractais_png
