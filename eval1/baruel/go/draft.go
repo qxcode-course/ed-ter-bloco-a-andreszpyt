@@ -15,12 +15,6 @@ func main() {
 		mapa[fig[i]]++
 	}
 
-	for i := 1; i <= qb-1; i++ {
-		if mapa[qt] == 0 {
-			faltam = append(faltam, fig[i])
-		}
-	}
-
 	for i := range fig {
 		if mapa[fig[i]] > 1 {
 			rep = append(rep, fig[i])
