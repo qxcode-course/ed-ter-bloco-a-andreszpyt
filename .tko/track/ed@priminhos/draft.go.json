@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_11-39-22",
+            "content": "@@ -253,16 +253,20 @@\n ; i %3C n;\n+ i++\n  %7B%0A%09%09if \n@@ -308,15 +308,8 @@\n  i)%0A\n-%09%09%09i++%0A\n %09%09%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-07_11-40-23",
+            "content": "@@ -333,18 +333,11 @@\n (%22%5D%5Cn%22)%0A\n-%09return\n %0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-07_11-40-41",
+            "content": "@@ -238,18 +238,8 @@\n %5B%22)%0A\n-%09aux := 0%0A\n %09for\n@@ -251,20 +251,14 @@\n  0; \n-aux\n+i\n  %3C n;\n- i++\n  %7B%0A%09\n@@ -307,11 +307,9 @@\n %0A%09%09%09\n-aux\n+i\n ++%0A%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-07_11-42-37",
+            "content": "@@ -308,16 +308,18 @@\n intf(%22%25d\n+, \n %22, i)%0A%09%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-07_11-42-49",
+            "content": "@@ -331,27 +331,8 @@\n %09%09%7D%0A\n-%09%09fmt.Printf(%22, %22)%0A\n %09%7D%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-07_11-43-13",
+            "content": "@@ -222,26 +222,22 @@\n n)%0A%09\n-s := make(%5B%5Dint, n\n+fmt.Printf(%22%5B%22\n )%0A%09a\n@@ -298,18 +298,27 @@\n %0A%09%09%09\n-s%5Baux%5D =\n+fmt.Printf(%22%25d%22,\n  i\n+)\n %0A%09%09%09\n@@ -327,16 +327,35 @@\n x++%0A%09%09%7D%0A\n+%09%09fmt.Printf(%22, %22)%0A\n %09%7D%0A%09fmt.\n@@ -363,12 +363,15 @@\n rint\n-ln(s\n+f(%22%5D%5Cn%22\n )%0A%09r\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-07_11-45-16",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif x == 2 {\n\t\treturn true\n\t}\n\tif x%2-1 != 0 {\n\t\treturn false\n\t}\n\n\teh_primo(x / 2)\n\treturn true\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\ts := make([]int, n)\n\taux := 0\n\tfor i := 0; aux < n; i++ {\n\t\tif eh_primo(i) {\n\t\t\ts[aux] = i\n\t\t\taux++\n\t\t}\n\t}\n\tfmt.Println(s)\n\treturn\n}\n",
+            "lines": "33"
+        }
+    ]
+}

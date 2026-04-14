@@ -1,0 +1,304 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_10-15-24",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,598 +37,39 @@\n ) %7B%0A\n-%09var qt, qb int%0A%09fmt.Scan(&qt, &qb)%0A%09fig := make(%5B%5Dint, qb)%0A%09mark := make(map%5Bint%5Dint)%0A%09rep := make(%5B%5Dint, 0)%0A%09falta := make(%5B%5Dint, 0)%0A%0A%09for i := range fig %7B%0A%09%09fmt.Scan(&fig%5Bi%5D)%0A%09%09mark%5Bfig%5Bi%5D%5D++%0A%09%7D%0A%0A%09for i := range fig %7B%0A%09%09if mark%5Bfig%5Bi%5D%5D %3E 1 %7B%0A%09%09%09rep = append(rep, fig%5Bi%5D)%0A%09%09%7D%0A%09%09if mark%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09falta = append(falta, fig%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A%09if len(rep) %3E 0 %7B%0A%09%09for i := range rep %7B%0A%09%09%09fmt.Printf(%22%25d%22, rep%5Bi%5D)%0A%09%09%09if i != len(rep)-1 %7B%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%09fmt.Printf(%22 %22)%0A%09%09%7D%0A%09%7D else %7B%0A%09%09fmt.Printf(%22N%22)%0A%09%7D%0A%0A%09if len(falta) %3E 0 %7B%0A%09%09fmt.Printf(%22%25d%22, len(falta))%0A%09%7D else %7B%0A%09%09fmt.Printf(%22N%22)%0A%09%7D%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-14_10-31-01",
+            "content": "@@ -477,26 +477,8 @@\n 1 %7B%0A\n-%09%09%09%09fmt.Println()%0A\n %09%09%09%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_10-31-57",
+            "content": "@@ -98,18 +98,18 @@\n  qb)%0A%09ma\n-pa\n+rk\n  := make\n@@ -121,12 +121,11 @@\n int%5D\n-bool\n+int\n )%0A%09r\n@@ -144,16 +144,41 @@\n %5Dint, 0)\n+%0A%09falta := make(%5B%5Dint, 0)\n %0A%0A%09for i\n@@ -217,26 +217,26 @@\n i%5D)%0A%09%09ma\n-pa\n+rk\n %5Bfig%5Bi%5D%5D\n  = true%0A\n@@ -231,15 +231,10 @@\n %5Bi%5D%5D\n- = true\n+++\n %0A%09%7D%0A\n@@ -267,18 +267,18 @@\n f ma\n-pa\n+rk\n %5Bfig%5Bi%5D%5D\n  %7B%0A%09\n@@ -273,16 +273,20 @@\n %5Bfig%5Bi%5D%5D\n+ %3E 1\n  %7B%0A%09%09%09re\n@@ -313,16 +313,78 @@\n i%5D)%0A%09%09%7D%0A\n+%09%09if mark%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09falta = append(falta, fig%5Bi%5D)%0A%09%09%7D%0A\n %09%7D%0A%0A%09if \n@@ -438,17 +438,16 @@\n intf(%22%25d\n- \n %22, rep%5Bi\n@@ -455,22 +455,34 @@\n )%0A%09%09\n-%7D%0A%09%7D else\n+%09if i != len(rep)-1\n  %7B%0A%09%09\n+%09\n+%09\n fmt.\n@@ -490,61 +490,97 @@\n rint\n-f(%22N%22)%0A%09%7D%0A%0A%09faltam := qt - (qb - len(rep))\n+ln()%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%09fmt.Printf(%22 %22)%0A%09%09%7D%0A%09%7D else %7B%0A%09%09fmt.Printf(%22N%22)%0A%09%7D%0A\n %0A%09if \n+len(\n falta\n-m\n+)\n  %3E 0\n@@ -602,18 +602,21 @@\n (%22%25d\n- \n %22, \n+len(\n falta\n-m\n+)\n )%0A%09%7D\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-14_10-37-33",
+            "content": "@@ -117,19 +117,20 @@\n map%5Bint%5D\n-int\n+bool\n )%0A%09rep :\n@@ -207,10 +207,15 @@\n %5Bi%5D%5D\n-++\n+ = true\n %0A%09%7D%0A\n@@ -258,12 +258,8 @@\n %5Bi%5D%5D\n- %3E 1\n  %7B%0A%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_10-38-27",
+            "content": "@@ -255,9 +255,9 @@\n %5D %3E \n-2\n+1\n  %7B%0A%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_10-40-36",
+            "content": "@@ -255,9 +255,9 @@\n %5D %3E \n-3\n+2\n  %7B%0A%09\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_10-41-08",
+            "content": "@@ -251,17 +251,17 @@\n g%5Bi%5D%5D %3E \n-1\n+3\n  %7B%0A%09%09%09re\n@@ -433,12 +433,8 @@\n rep)\n- - 1\n )%0A%09i\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_10-41-34",
+            "content": "@@ -160,22 +160,17 @@\n  := \n-0; i %3C qb; i++\n+range fig\n  %7B%0A%09\n@@ -288,28 +288,8 @@\n i%5D)%0A\n-%09%09%09mapa%5Bfig%5Bi%5D%5D = 0%0A\n %09%09%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-14_10-46-10",
+            "content": "@@ -308,10 +308,12 @@\n %5Bi%5D%5D\n---\n+ = 0\n %0A%09%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_10-46-25",
+            "content": "@@ -426,24 +426,8 @@\n %09%7D%0A%0A\n-%09fmt.Println()%0A%0A\n %09fal\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_10-47-16",
+            "content": "@@ -361,61 +361,8 @@\n p %7B%0A\n-%09%09%09if i == len(fig)-1 %7B%0A%09%09%09%09fmt.Println(rep%5Bi%5D)%0A%09%09%09%7D%0A\n %09%09%09f\n@@ -422,16 +422,32 @@\n N%22)%0A%09%7D%0A%0A\n+%09fmt.Println()%0A%0A\n %09faltam \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-14_10-48-00",
+            "content": "@@ -539,18 +539,17 @@\n mt.Print\n-ln\n+f\n (%22%25d %22, \n@@ -577,18 +577,17 @@\n mt.Print\n-ln\n+f\n (%22N%22)%0A%09%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-48-26",
+            "content": "@@ -542,16 +542,23 @@\n Println(\n+%22%25d %22, \n faltam)%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-48-40",
+            "content": "@@ -359,12 +359,8 @@\n rep \n-- 1 \n %7B%0A%09%09\n@@ -372,19 +372,19 @@\n  == len(\n-rep\n+fig\n )-1 %7B%0A%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-48-58",
+            "content": "@@ -355,16 +355,20 @@\n nge rep \n+- 1 \n %7B%0A%09%09%09if \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-49-06",
+            "content": "@@ -376,16 +376,18 @@\n len(rep)\n+-1\n  %7B%0A%09%09%09%09f\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-49-26",
+            "content": "@@ -503,16 +503,20 @@\n len(rep)\n+ - 1\n )%0A%09if fa\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_10-50-16",
+            "content": "@@ -477,27 +477,8 @@\n %09%7D%0A%0A\n-%09fmt.Printf(%22%5Cn%22)%0A%0A\n %09fal\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_11-08-45",
+            "content": "@@ -396,18 +396,11 @@\n rint\n-f(%22%25d%5Cn%22, \n+ln(\n rep%5B\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-09-17",
+            "content": "@@ -414,26 +414,8 @@\n i%5D)%0A\n-%09%09%09%09fmt.Println()%0A\n %09%09%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-09-35",
+            "content": "@@ -380,10 +380,8 @@\n rep)\n--1\n  %7B%0A%09\n@@ -410,16 +410,34 @@\n rep%5Bi%5D)%0A\n+%09%09%09%09fmt.Println()%0A\n %09%09%09%7D%0A%09%09%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-09-57",
+            "content": "@@ -376,16 +376,18 @@\n len(rep)\n+-1\n  %7B%0A%09%09%09%09f\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-10-07",
+            "content": "@@ -480,16 +480,35 @@\n N%22)%0A%09%7D%0A%0A\n+%09fmt.Printf(%22%5Cn%22)%0A%0A\n %09faltam \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-10-14",
+            "content": "@@ -477,36 +477,15 @@\n f(%22N\n-%5Cn\n %22)%0A%09%7D%0A%0A\n-%09fmt.Printf(%22%5Cn%22)%0A%0A\n %09fal\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-14_11-10-31",
+            "content": "@@ -414,25 +414,17 @@\n i%5D)%0A%09%09%09%7D\n- else %7B%0A%09\n+%0A\n %09%09%09fmt.P\n@@ -444,21 +444,16 @@\n rep%5Bi%5D)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D e\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-10-51",
+            "content": "@@ -533,17 +533,19 @@\n qt - (qb\n--\n+ - \n len(rep)\n@@ -549,10 +549,8 @@\n ep))\n-*4\n %0A%09if\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-11-51",
+            "content": "@@ -529,17 +529,16 @@\n  := \n-(\n qt - (qb\n  - l\n@@ -533,19 +533,17 @@\n qt - (qb\n- - \n+-\n len(rep)\n@@ -547,12 +547,9 @@\n ep))\n-) * \n+*\n 4%0A%09i\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-12-07",
+            "content": "@@ -495,16 +495,35 @@\n n%22)%0A%09%7D%0A%0A\n+%09fmt.Printf(%22%5Cn%22)%0A%0A\n %09faltam \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-12-35",
+            "content": "@@ -148,21 +148,8 @@\n , 0)\n-%0A%09faltam := 0\n %0A%0A%09f\n@@ -218,80 +218,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C qb; i++ %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n@@ -491,24 +491,62 @@\n (%22N%5Cn%22)%0A%09%7D%0A%0A\n+%09faltam := (qt - (qb - len(rep))) * 4%0A\n %09if faltam %3E\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-14_11-13-55",
+            "content": "@@ -450,17 +450,18 @@\n %09%09%09if i \n-%3C\n+==\n  len(rep\n@@ -482,17 +482,18 @@\n intf(%22%25d\n- \n+%5Cn\n %22, rep%5Bi\n@@ -517,34 +517,33 @@\n %09%09fmt.Printf(%22%25d\n-%5Cn\n+ \n %22, rep%5Bi%5D)%0A%09%09%09%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-16-55",
+            "content": "@@ -464,10 +464,8 @@\n rep)\n--1\n  %7B%0A%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-17-16",
+            "content": "@@ -233,33 +233,38 @@\n %0A%0A%09for i := \n-range fig\n+0; i %3C qb; i++\n  %7B%0A%09%09if mapa\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-18-09",
+            "content": "@@ -144,16 +144,29 @@\n %5Dint, 0)\n+%0A%09faltam := 0\n %0A%0A%09for i\n@@ -227,16 +227,83 @@\n %5D++%0A%09%7D%0A%0A\n+%09for i := range fig %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for i :\n@@ -580,34 +580,8 @@\n %09%7D%0A%0A\n-%09faltam := qt - qb - rep%0A%0A\n %09if \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-19-58",
+            "content": "@@ -517,24 +517,19 @@\n  - qb - \n-len(\n rep\n-)\n %0A%0A%09if fa\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-20-10",
+            "content": "@@ -512,17 +512,16 @@\n := qt - \n-(\n qb - len\n@@ -525,17 +525,16 @@\n len(rep)\n-)\n %0A%0A%09if fa\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-20-32",
+            "content": "@@ -148,21 +148,8 @@\n , 0)\n-%0A%09faltam := 0\n %0A%0A%09f\n@@ -311,31 +311,8 @@\n %5D--%0A\n-%09%09%7D else %7B%0A%09%09%09faltam++%0A\n %09%09%7D%0A\n@@ -492,20 +492,53 @@\n (%22N%5Cn%22)%0A\n-\n %09%7D%0A%0A\n+%09faltam := qt - (qb - len(rep))%0A%0A\n %09if falt\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-21-09",
+            "content": "@@ -320,16 +320,39 @@\n g%5Bi%5D%5D--%0A\n+%09%09%7D else %7B%0A%09%09%09faltam++%0A\n %09%09%7D%0A%09%7D%0A%0A\n@@ -536,33 +536,8 @@\n %09%7D%0A%0A\n-%09faltam = qt - len(mapa)%0A\n %09if \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-25-37",
+            "content": "@@ -231,71 +231,8 @@\n %09%7D%0A%0A\n-%09for i := range mapa %7B%0A%09%09if mapa%5Bi%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n@@ -505,24 +505,49 @@\n (%22N%5Cn%22)%0A%09%7D%0A%0A\n+%09faltam = qt - len(mapa)%0A\n %09if faltam %3E\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-04-14_11-26-38",
+            "content": "@@ -263,17 +263,17 @@\n mapa%5Bi%5D \n-%3E\n+=\n = 0 %7B%0A%09%09\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-26-59",
+            "content": "@@ -235,35 +235,36 @@\n %09for i := range \n-fig\n+mapa\n  %7B%0A%09%09if mapa%5Bfig\n@@ -260,22 +260,17 @@\n if mapa%5B\n-fig%5Bi%5D\n+i\n %5D %3E= 0 %7B\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-27-45",
+            "content": "@@ -227,16 +227,83 @@\n %5D++%0A%09%7D%0A%0A\n+%09for i := range fig %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D %3E= 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for i :\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-28-27",
+            "content": "@@ -324,31 +324,8 @@\n %5D--%0A\n-%09%09%7D else %7B%0A%09%09%09faltam++%0A\n %09%09%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-14_11-29-03",
+            "content": "@@ -347,20 +347,8 @@\n m++%0A\n-%09%09%09continue%0A\n %09%09%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-29-15",
+            "content": "@@ -258,42 +258,24 @@\n %09if \n+mapa%5B\n fig%5Bi%5D\n- == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D else\n+%5D %3E 1\n  %7B%0A%09\n@@ -320,16 +320,51 @@\n g%5Bi%5D%5D--%0A\n+%09%09%7D else %7B%0A%09%09%09faltam++%0A%09%09%09continue%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-14_11-29-56",
+            "content": "@@ -258,24 +258,42 @@\n %09if \n-mapa%5B\n fig%5Bi%5D\n-%5D %3E 1\n+ == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D else\n  %7B%0A%09\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-38-03",
+            "content": "@@ -120,19 +120,16 @@\n %5Bint%5Dint\n-, 0\n )%0A%09rep :\n@@ -231,80 +231,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C qb; i++ %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-14_11-39-16",
+            "content": "@@ -230,16 +230,88 @@\n %5D++%0A%09%7D%0A%0A\n+%09for i := 0; i %3C qb; i++ %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for i :\n@@ -588,33 +588,8 @@\n %09%7D%0A%0A\n-%09faltam = qt - len(rep)%0A%0A\n %09if \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-40-40",
+            "content": "@@ -234,75 +234,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C qt; i++ %7B%0A%09%09if mapa%5Bi%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n@@ -508,24 +508,49 @@\n (%22N%5Cn%22)%0A%09%7D%0A%0A\n+%09faltam = qt - len(rep)%0A%0A\n %09if faltam %3E\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_11-42-46",
+            "content": "@@ -240,17 +240,17 @@\n or i := \n-1\n+0\n ; i %3C qt\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-43-55",
+            "content": "@@ -226,24 +226,91 @@\n g%5Bi%5D%5D++%0A%09%7D%0A%0A\n+%09for i := 1; i %3C qt; i++ %7B%0A%09%09if mapa%5Bi%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09for i := ra\n@@ -402,75 +402,8 @@\n %09%7D%0A%0A\n-%09for i := 1; i %3C qt; i++ %7B%0A%09%09if mapa%5Bi%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09if \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-45-07",
+            "content": "@@ -345,25 +345,25 @@\n  := 1; i %3C q\n-b\n+t\n ; i++ %7B%0A%09%09if\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-45-21",
+            "content": "@@ -333,33 +333,33 @@\n %7D%0A%09%7D%0A%0A%09for i := \n-0\n+1\n ; i %3C qb; i++ %7B%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-45-33",
+            "content": "@@ -327,24 +327,91 @@\n %5D--%0A%09%09%7D%0A%09%7D%0A%0A\n+%09for i := 0; i %3C qb; i++ %7B%0A%09%09if mapa%5Bi%5D == 0 %7B%0A%09%09%09faltam++%0A%09%09%7D%0A%09%7D%0A%0A\n %09if len(rep)\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-46-39",
+            "content": "@@ -159,30 +159,17 @@\n ltam := \n-make(%5B%5Dint, 0)\n+0\n %0A%0A%09for i\n@@ -234,98 +234,8 @@\n %09%7D%0A%0A\n-%09for i := range fig %7B%0A%09%09if mapa%5Bfig%5Bi%5D%5D == 0 %7B%0A%09%09%09faltam = append(faltam, fig%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-14_11-48-07",
+            "content": "@@ -619,27 +619,22 @@\n %09%7D%0A%0A%09if \n-len(\n faltam\n-)\n  %3E 0 %7B%0A%09\n@@ -639,92 +639,27 @@\n %0A%09%09f\n-or i := range faltam %7B%0A%09%09%09if i %3C len(faltam)-1 %7B%0A%09%09%09%09fmt.Printf(%22%25d %22, \n+mt.Println(\n faltam\n-%5Bi%5D\n )%0A\n-%09%09\n %09%7D e\n@@ -658,34 +658,32 @@\n am)%0A%09%7D else %7B%0A%09%09\n-%09\n-%09\n fmt.Printf(%22%25d%5Cn\n@@ -679,69 +679,18 @@\n rint\n-f(%22%25d%5Cn%22, faltam%5Bi%5D)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D else %7B%0A%09%09fmt.Printf\n+ln\n (%22N\n-%5Cn\n %22)%0A%09%7D%0A\n+%0A\n %7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-04-14_11-48-45",
+            "content": "@@ -257,23 +257,17 @@\n  := \n-1; i %3C= qt; i++\n+range fig\n  %7B%0A%09\n@@ -275,18 +275,22 @@\n if mapa%5B\n-qt\n+fig%5Bi%5D\n %5D == 0 %7B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-49-15",
+            "content": "@@ -263,18 +263,16 @@\n  i %3C= qt\n--1\n ; i++ %7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-49-32",
+            "content": "@@ -262,17 +262,19 @@\n ; i %3C= q\n-b\n+t-1\n ; i++ %7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-50-11",
+            "content": "@@ -263,18 +263,16 @@\n  i %3C= qb\n--1\n ; i++ %7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_11-50-18",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qt, qb int\n\tfmt.Scan(&qt, &qb)\n\tfig := make([]int, qb)\n\tmapa := make(map[int]int, 0)\n\trep := make([]int, 0)\n\tfaltam := make([]int, 0)\n\n\tfor i := 0; i < qb; i++ {\n\t\tfmt.Scan(&fig[i])\n\t\tmapa[fig[i]]++\n\t}\n\n\tfor i := 1; i <= qb-1; i++ {\n\t\tif mapa[qt] == 0 {\n\t\t\tfaltam = append(faltam, fig[i])\n\t\t}\n\t}\n\n\tfor i := range fig {\n\t\tif mapa[fig[i]] > 1 {\n\t\t\trep = append(rep, fig[i])\n\t\t\tmapa[fig[i]]--\n\t\t}\n\t}\n\n\tif len(rep) > 0 {\n\t\tfor i := range rep {\n\t\t\tif i < len(rep)-1 {\n\t\t\t\tfmt.Printf(\"%d \", rep[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", rep[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n\n\tif len(faltam) > 0 {\n\t\tfor i := range faltam {\n\t\t\tif i < len(faltam)-1 {\n\t\t\t\tfmt.Printf(\"%d \", faltam[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", faltam[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n}\n",
+            "lines": "54"
+        }
+    ]
+}

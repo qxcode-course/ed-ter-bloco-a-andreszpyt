@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-36-04",
+            "content": "@@ -39,20 +39,423 @@\n ) %7B%0A\n-%09var n int%0A%09\n+    /*descasados = Crie dicion%C3%A1rio%5Bint%5Dint para armazenar a quantidade de elementos daquele tipo descasados%0A    para cada animal no zoo:%0A        animal = leia o valor%0A        Se ele tiver par dispon%C3%ADvel na no mapa de descasados%0A            decremente o valor no mapa%0A            incremente a contagem de pares%0A        se n%C3%A3o%0A            adicione esse animal no mapa ou incremente seu valor de 1*/%0A    var n int%0A    \n var \n@@ -465,13 +465,17 @@\n tes \n+:\n = 0%0A\n-%09\n+    \n fmt.\n@@ -483,17 +483,20 @@\n can(&n)%0A\n-%09\n+    \n peoples \n@@ -513,17 +513,20 @@\n int, n)%0A\n-%09\n+    \n mapa := \n@@ -547,17 +547,20 @@\n nt, 0)%0A%0A\n-%09\n+    \n for i :=\n@@ -576,18 +576,24 @@\n oples %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -606,18 +606,24 @@\n les%5Bi%5D)%0A\n-%09%09\n+        \n mapa%5Bpeo\n@@ -633,18 +633,24 @@\n s%5Bi%5D%5D++%0A\n-%09%09\n+        \n if mapa%5B\n@@ -667,29 +667,46 @@\n %5D%5D =\n-=\n  1 %7B%0A\n-%09%09%09partes++%0A%09%09%09\n+            partes++%0A            \n mapa\n@@ -725,11 +725,20 @@\n %5D--%0A\n-%09%09%09\n+            \n mapa\n@@ -756,34 +756,22 @@\n %5D--%0A\n-%09%09%7D%0A%09%7D%0A%09fmt.Println(partes)\n+        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-14_11-36-56",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar partes = 0\n\tfmt.Scan(&n)\n\tpeoples := make([]int, n)\n\tmapa := make(map[int]int, 0)\n\n\tfor i := range peoples {\n\t\tfmt.Scan(&peoples[i])\n\t\tmapa[peoples[i]]++\n\t\tif mapa[-peoples[i]] == 1 {\n\t\t\tpartes++\n\t\t\tmapa[-peoples[i]]--\n\t\t\tmapa[peoples[i]]--\n\t\t}\n\t}\n\tfmt.Println(partes)\n}\n",
+            "lines": "22"
+        }
+    ]
+}

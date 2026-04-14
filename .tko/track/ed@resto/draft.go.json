@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_10-25-25",
+            "content": "@@ -127,11 +127,16 @@\n tf(%22\n-%25d \n+div(%25d)=\n %25d%5Cn\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-07_10-25-47",
+            "content": "@@ -193,14 +193,7 @@\n &s)%0A\n-%09div(s)\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-04-07_10-26-25",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc div(v int) {\n\tif v == 0 {\n\t\treturn\n\t}\n\n\tvalue := v / 2\n\tresto := v % 2\n\n\tdiv(value)\n\tfmt.Printf(\"%d %d\\n\", value, resto)\n}\n\nfunc main() {\n\tvar s int\n\tfmt.Scan(&s)\n\tdiv(s)\n}\n",
+            "lines": "21"
+        }
+    ]
+}

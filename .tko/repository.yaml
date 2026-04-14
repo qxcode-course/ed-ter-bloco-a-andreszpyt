@@ -14,9 +14,15 @@ sources:
   writeable: false
   quests: null
   tasks: null
+- name: eval1
+  target: https://github.com/senapk/eval_26_ed_1
+  index: README.md
+  type: git
+  writeable: false
+  quests: null
+  tasks: null
 expanded:
-- ed@vector
-- ed@rec
+- eval1@teste-1
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, concept:1}'
@@ -37,6 +43,10 @@ tasks:
   ed@eh_primo: '{self:1, rate:100, study:10}'
   ed@vetequals: '{self:1, rate:100, study:20, concept:1, debug:1}'
   ed@priminhos: '{rate:25}'
+  eval1@baruel: '{rate:25}'
+  eval1@apagando: '{self:1, rate:100}'
+  eval1@casais: '{self:1, rate:100}'
+  eval1@triangulo: '{self:1, rate:100}'
   ed@buscas: '{}'
   ed@rotacoes: '{}'
   ed@alternando: '{}'
@@ -55,7 +65,6 @@ tasks:
   ed@santo: '{}'
   ed@bitcoin: '{}'
   ed@fractais_png: '{}'
-  ed@fractais: '{}'
   ed@wordsearch: '{}'
   ed@subset_sum: '{}'
   ed@distancia: '{}'
@@ -106,6 +115,8 @@ tasks:
   ed@caminho: '{}'
   ed@detonate: '{}'
   ed@escapeSpread: '{}'
+  ed@fractais: '{}'
+  eval1@queimada: '{}'
 flags:
   inbox: inbox
   panel: help
@@ -113,4 +124,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
+selected: eval1@baruel

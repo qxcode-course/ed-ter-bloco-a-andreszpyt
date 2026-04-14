@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_11-00-07",
+            "content": "@@ -60,17 +60,16 @@\n can(&n)%0A\n-%0A\n %09id := m\n@@ -82,17 +82,16 @@\n int, n)%0A\n-%0A\n %09for i :\n@@ -88,37 +88,32 @@\n )%0A%09for i := \n-0; i %3C n; i++\n+range id\n  %7B%0A%09%09fmt.Sca\n@@ -151,17 +151,16 @@\n can(&m)%0A\n-%0A\n %09queue :\n@@ -215,18 +215,20 @@\n %7B%0A%09%09var \n-id\n+temp\n  int%0A%09%09f\n@@ -236,18 +236,20 @@\n t.Scan(&\n-id\n+temp\n )%0A%09%09queu\n@@ -254,17 +254,20 @@\n eue%5B\n-id%5D = tru\n+temp%5D = fals\n e%0A%09%7D\n@@ -298,14 +298,13 @@\n + %7B%0A\n+\n %09%09if \n-!\n queu\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_11-03-23",
+            "content": "@@ -316,16 +316,61 @@\n d%5Bi%5D%5D %7B%0A\n+%09%09%09if i == n-1 %7B%0A%09%09%09%09fmt.Println(id%5Bi%5D)%0A%09%09%09%7D%0A\n %09%09%09fmt.P\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-14_11-03-54",
+            "content": "@@ -355,21 +355,7 @@\n %0A%09%7D%0A\n-%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-14_11-04-12",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tid := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&id[i])\n\t}\n\n\tvar m int\n\tfmt.Scan(&m)\n\n\tqueue := make(map[int]bool, m)\n\tfor i := 0; i < m; i++ {\n\t\tvar id int\n\t\tfmt.Scan(&id)\n\t\tqueue[id] = true\n\t}\n\n\tfor i := 0; i < n; i++ {\n\t\tif !queue[id[i]] {\n\t\t\tfmt.Printf(\"%d \", id[i])\n\t\t}\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "31"
+        }
+    ]
+}
