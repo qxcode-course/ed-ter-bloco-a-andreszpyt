@@ -1,0 +1,7 @@
+2026-04-28 08:16:55, SELF, v:1, k:ed@bettersearch, self:1, rate:100, study:60, debug:1
+2026-04-28 08:16:58, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-04-28 08:17:03, EXEC, v:1, k:ed@multiset, mode:FULL, rate:0, size:59
+2026-04-28 08:18:33, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-04-28 08:18:38, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-04-28 08:38:10, EXEC, v:1, k:ed@multiset, mode:FULL, size:89, fail:COMP
+2026-04-28 08:38:12, MOVE, v:1, k:ed@multiset, mode:BACK

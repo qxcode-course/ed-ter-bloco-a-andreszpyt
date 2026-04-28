@@ -352,7 +352,37 @@
         },
         {
             "label": "2026-04-14_11-56-05",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qt, qb int\n\tfmt.Scan(&qt, &qb)\n\tfig := make([]int, qb)\n\tmapa := make(map[int]int, 0)\n\trep := make([]int, 0)\n\tfaltam := make([]int, 0)\n\n\tfor i := 0; i < qb; i++ {\n\t\tfmt.Scan(&fig[i])\n\t\tmapa[fig[i]]++\n\t}\n\n\tfor i := 1; i <= len(rep); i++ {\n\t\tif mapa[i] == 0 {\n\t\t\tfaltam = append(faltam, fig[i])\n\t\t}\n\t}\n\n\tfor i := range fig {\n\t\tif mapa[fig[i]] > 1 {\n\t\t\trep = append(rep, fig[i])\n\t\t\tmapa[fig[i]]--\n\t\t}\n\t}\n\n\tif len(rep) > 0 {\n\t\tfor i := range rep {\n\t\t\tif i < len(rep)-1 {\n\t\t\t\tfmt.Printf(\"%d \", rep[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", rep[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n\n\tif len(faltam) > 0 {\n\t\tfor i := range faltam {\n\t\t\tif i < len(faltam)-1 {\n\t\t\t\tfmt.Printf(\"%d \", faltam[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", faltam[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n}\n",
+            "content": "@@ -257,17 +257,24 @@\n  := \n-0\n+1\n ; i %3C\n- qt\n+= len(rep)\n ; i+\n@@ -287,22 +287,17 @@\n if mapa%5B\n-fig%5Bi%5D\n+i\n %5D == 0 %7B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-05-36",
+            "content": "@@ -279,16 +279,25 @@\n %09if \n-!\n mapa%5B\n-i%5D\n+fig%5Bi%5D%5D == 0\n  %7B%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-05-58",
+            "content": "@@ -279,20 +279,16 @@\n %09if \n+!\n mapa%5Bi%5D\n- == 0\n  %7B%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-06-09",
+            "content": "@@ -280,22 +280,17 @@\n if mapa%5B\n-fig%5Bi%5D\n+i\n %5D == 0 %7B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-06-58",
+            "content": "@@ -262,18 +262,16 @@\n ; i %3C qt\n--1\n ; i++ %7B%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-07-11",
+            "content": "@@ -257,17 +257,17 @@\n  := \n-1\n+0\n ; i %3C qt\n ; i+\n@@ -262,16 +262,18 @@\n ; i %3C qt\n+-1\n ; i++ %7B%0A\n@@ -282,17 +282,22 @@\n if mapa%5B\n-i\n+fig%5Bi%5D\n %5D == 0 %7B\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_12-08-43",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qt, qb int\n\tfmt.Scan(&qt, &qb)\n\tfig := make([]int, qb)\n\tmapa := make(map[int]int, 0)\n\trep := make([]int, 0)\n\tfaltam := make([]int, 0)\n\n\tfor i := 0; i < qb; i++ {\n\t\tfmt.Scan(&fig[i])\n\t\tmapa[fig[i]]++\n\t}\n\n\tfor i := 1; i < qt; i++ {\n\t\tif mapa[i] == 0 {\n\t\t\tfaltam = append(faltam, fig[i])\n\t\t}\n\t}\n\n\tfor i := range fig {\n\t\tif mapa[fig[i]] > 1 {\n\t\t\trep = append(rep, fig[i])\n\t\t\tmapa[fig[i]]--\n\t\t}\n\t}\n\n\tif len(rep) > 0 {\n\t\tfor i := range rep {\n\t\t\tif i < len(rep)-1 {\n\t\t\t\tfmt.Printf(\"%d \", rep[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", rep[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n\n\tif len(faltam) > 0 {\n\t\tfor i := range faltam {\n\t\t\tif i < len(faltam)-1 {\n\t\t\t\tfmt.Printf(\"%d \", faltam[i])\n\t\t\t} else {\n\t\t\t\tfmt.Printf(\"%d\\n\", faltam[i])\n\t\t\t}\n\t\t}\n\t} else {\n\t\tfmt.Printf(\"N\\n\")\n\t}\n}\n",
             "lines": "54"
         }
     ]
