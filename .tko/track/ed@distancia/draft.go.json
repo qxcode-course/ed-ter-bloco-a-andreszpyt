@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-13_01-03-14",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -37,601 +37,39 @@\n ) %7B%0A\n-%09var seq string%0A%09var l int%0A%09fmt.Scan(&seq, &l)%0A%0A%09s := %5B%5Dbyte(seq)%0A%0A%09var dfs func(idx int) bool%0A%09dfs = func(idx int) bool %7B%0A%09%09if idx == len(s) %7B%0A%09%09%09return true%0A%09%09%7D%0A%0A%09%09if s%5Bidx%5D != '.' %7B%0A%09%09%09return dfs(idx + 1)%0A%09%09%7D%0A%0A%09%09for d := 0; d %3C= l; d++ %7B%0A%09%09%09char := byte('0' + d)%0A%09%09%09pode := true%0A%0A%09%09%09inicio := idx - l%0A%09%09%09if inicio %3C 0 %7B%0A%09%09%09%09inicio = 0%0A%09%09%09%7D%0A%09%09%09for i := inicio; i %3C idx; i++ %7B%0A%09%09%09%09if s%5Bi%5D == char %7B%0A%09%09%09%09%09pode = false%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A%09%09%09if pode %7B%0A%09%09%09%09s%5Bidx%5D = char%0A%09%09%09%09if dfs(idx + 1) %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%09s%5Bidx%5D = '.'%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09return false%0A%09%7D%0A%0A%09dfs(0)%0A%09fmt.Println(string(s)\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-13_01-30-17",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar seq string\n\tvar l int\n\tfmt.Scan(&seq, &l)\n\n\ts := []byte(seq)\n\n\tvar dfs func(idx int) bool\n\tdfs = func(idx int) bool {\n\t\tif idx == len(s) {\n\t\t\treturn true\n\t\t}\n\n\t\tif s[idx] != '.' {\n\t\t\treturn dfs(idx + 1)\n\t\t}\n\n\t\tfor d := 0; d <= l; d++ {\n\t\t\tchar := byte('0' + d)\n\t\t\tpode := true\n\n\t\t\tinicio := idx - l\n\t\t\tif inicio < 0 {\n\t\t\t\tinicio = 0\n\t\t\t}\n\t\t\tfor i := inicio; i < idx; i++ {\n\t\t\t\tif s[i] == char {\n\t\t\t\t\tpode = false\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif pode {\n\t\t\t\ts[idx] = char\n\t\t\t\tif dfs(idx + 1) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t\ts[idx] = '.'\n\t\t\t}\n\t\t}\n\n\t\treturn false\n\t}\n\n\tdfs(0)\n\tfmt.Println(string(s))\n}\n",
+            "lines": "53"
+        }
+    ]
+}

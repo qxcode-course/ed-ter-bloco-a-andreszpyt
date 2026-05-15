@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-13_00-26-55",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -37,392 +37,39 @@\n ) %7B%0A\n-%09var n, k int%0A%09fmt.Scan(&n, &k)%0A%0A%09arr := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&arr%5Bi%5D)%0A%09%7D%0A%0A%09var dfs func(idx, sum int) bool%0A%09dfs = func(idx, sum int) bool %7B%0A%09%09if sum == k %7B%0A%09%09%09return true%0A%09%09%7D%0A%09%09if idx %3E= n %7C%7C sum %3E k %7B%0A%09%09%09return false%0A%09%09%7D%0A%0A%09%09return dfs(idx+1, sum+arr%5Bidx%5D) %7C%7C dfs(idx+1, sum)%0A%09%7D%0A%0A%09if dfs(0, 0) %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-13_01-02-03",
+            "content": "@@ -383,19 +383,20 @@\n rintln(%22\n-tru\n+fals\n e%22)%0A%09%7D e\n@@ -412,25 +412,24 @@\n mt.Println(%22\n-fals\n+tru\n e%22)%0A%09%7D%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-13_01-02-22",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar n, k int\n\tfmt.Scan(&n, &k)\n\n\tarr := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&arr[i])\n\t}\n\n\tvar dfs func(idx, sum int) bool\n\tdfs = func(idx, sum int) bool {\n\t\tif sum == k {\n\t\t\treturn true\n\t\t}\n\t\tif idx >= n || sum > k {\n\t\t\treturn false\n\t\t}\n\n\t\treturn dfs(idx+1, sum+arr[idx]) || dfs(idx+1, sum)\n\t}\n\n\tif dfs(0, 0) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "33"
+        }
+    ]
+}

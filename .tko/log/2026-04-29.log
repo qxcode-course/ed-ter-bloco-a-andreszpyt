@@ -1,0 +1,3 @@
+2026-04-29 11:16:39, MOVE, v:1, k:ed@lista_d1, mode:DOWN
+2026-04-29 11:26:50, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-04-29 11:26:52, EXEC, v:1, k:ed@lista_d1, mode:FULL, size:84, fail:COMP

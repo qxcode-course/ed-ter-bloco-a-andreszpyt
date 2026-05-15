@@ -1,0 +1,26 @@
+2026-05-12 09:06:18, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 09:29:23, EXEC, v:1, k:ed@multiset, mode:FULL, fail:COMP
+2026-05-12 09:29:27, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 09:29:29, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 09:29:30, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 09:29:36, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 09:29:38, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 09:29:39, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 09:30:32, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 09:30:48, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-12 09:45:22, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-05-12 09:45:28, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 09:46:24, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 09:46:27, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 10:48:30, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-05-12 10:48:36, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-05-12 23:35:21, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-12 23:42:42, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:80
+2026-05-12 23:42:44, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-12 23:42:59, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:30, concept:1
+2026-05-12 23:43:05, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:30, concept:1, refactor:1
+2026-05-12 23:43:13, MOVE, v:1, k:ed@priminhos, mode:PICK
+2026-05-12 23:56:32, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25
+2026-05-12 23:58:46, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:42
+2026-05-12 23:59:03, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:42
+2026-05-12 23:59:55, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:0, size:42

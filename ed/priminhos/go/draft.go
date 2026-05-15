@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func eh_primo(x int) bool {
 	if x < 2 {
@@ -9,11 +11,15 @@ func eh_primo(x int) bool {
 	if x == 2 {
 		return true
 	}
-	if x%2-1 != 0 {
+	if x%2 == 0 {
 		return false
 	}
 
-	eh_primo(x / 2)
+	for i := 3; i*i <= x; i += 2 {
+		if x%i == 0 {
+			return false
+		}
+	}
 	return true
 }
 
@@ -22,12 +28,20 @@ func main() {
 	fmt.Scan(&n)
 	s := make([]int, n)
 	aux := 0
+
 	for i := 0; aux < n; i++ {
 		if eh_primo(i) {
 			s[aux] = i
 			aux++
 		}
 	}
-	fmt.Println(s)
-	return
+
+	fmt.Printf("[")
+	for i, val := range s {
+		if i == len(s)-1 {
+			fmt.Printf("%d]\n", val)
+		} else {
+			fmt.Printf("%d, ", val)
+		}
+	}
 }

@@ -1,0 +1,24 @@
+2026-05-05 00:30:08, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-05 00:30:10, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-05 00:31:07, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-05 00:44:22, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:0, size:149
+2026-05-05 00:47:16, EXEC, v:1, k:ed@lista_d1, mode:FULL, rate:100, size:145
+2026-05-05 00:47:18, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-05 00:47:38, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:30
+2026-05-05 00:47:50, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:30, refactor:1
+2026-05-05 00:48:05, SELF, v:1, k:ed@lista_d1, self:1, rate:100, study:30, refactor:1
+2026-05-05 00:48:06, MOVE, v:1, k:ed@lista_d1, mode:PICK
+2026-05-05 00:48:07, MOVE, v:1, k:ed@lista_d1, mode:BACK
+2026-05-05 00:48:10, MOVE, v:1, k:ed@lista_d2, mode:DOWN
+2026-05-05 10:22:29, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-05 10:24:50, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-05-05 10:24:57, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-05 10:30:31, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-05-05 10:30:34, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-05 10:30:34, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:30:44, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:30:47, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 10:30:49, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 10:34:45, EXEC, v:1, k:Projetos@ed-ter-bloco-a-andreszpyt, mode:FREE, size:2544
+2026-05-05 10:38:14, EXEC, v:1, k:editorint@go, mode:FREE, size:259
+2026-05-05 10:39:54, EXEC, v:1, k:editorint@go, mode:FREE

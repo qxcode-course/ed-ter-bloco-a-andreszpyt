@@ -22,7 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@vector
+- ed@list
 tasks:
   ed@pintando: '{self:1, rate:100, study:20, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, concept:1}'
@@ -40,12 +40,17 @@ tasks:
   ed@resto: '{self:1, rate:100, study:15}'
   ed@mdc: '{self:1, rate:100, study:10, refactor:1}'
   ed@queimada: '{self:1, rate:100, study:12}'
+  ed@labirinto: '{self:1, rate:100, study:30, concept:1, refactor:1}'
   ed@eh_primo: '{self:1, rate:100, study:10}'
   ed@vetequals: '{self:1, rate:100, study:20, concept:1, debug:1}'
-  ed@priminhos: '{rate:25}'
+  ed@priminhos: '{self:1, rate:100, study:20, refactor:1}'
+  ed@wordsearch: '{self:1, rate:100, study:15}'
+  ed@subset_sum: '{self:1, rate:100, study:20}'
   ed@vetbuild: '{self:1, rate:100, study:30, concept:1, problem:1, refactor:1}'
   ed@setbuild: '{self:1, rate:100, study:110, concept:1, refactor:1}'
   ed@bettersearch: '{self:1, rate:100, study:60, debug:1}'
+  ed@multiset: '{self:1, rate:100, study:60, concept:1, refactor:1}'
+  ed@lista_d1: '{self:1, rate:100, study:30, refactor:1}'
   eval1@baruel: '{rate:25}'
   eval1@apagando: '{self:1, rate:100}'
   eval1@casais: '{self:1, rate:100}'
@@ -53,7 +58,6 @@ tasks:
   ed@buscas: '{}'
   ed@rotacoes: '{}'
   ed@alternando: '{}'
-  ed@labirinto: '{}'
   ed@enesimo: '{}'
   ed@escada: '{}'
   ed@binomiais: '{}'
@@ -68,16 +72,12 @@ tasks:
   ed@santo: '{}'
   ed@bitcoin: '{}'
   ed@fractais_png: '{}'
-  ed@wordsearch: '{}'
-  ed@subset_sum: '{}'
   ed@distancia: '{}'
   ed@permutacoes: '{}'
   ed@sudoku: '{}'
   ed@n_rainhas: '{}'
-  ed@multiset: '{}'
   ed@magicsearch: '{}'
   ed@iterador: '{}'
-  ed@lista_d1: '{}'
   ed@lista_d2: '{}'
   ed@lista_d4: '{}'
   ed@prin_list1: '{}'
@@ -115,13 +115,12 @@ tasks:
   ed@caminho: '{}'
   ed@detonate: '{}'
   ed@escapeSpread: '{}'
-  ed@fractais: '{}'
   eval1@queimada: '{}'
 flags:
   inbox: inbox
-  panel: help
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@multiset
+selected: ed@lista_d2

@@ -1,0 +1,23 @@
+2026-05-13 00:01:01, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:25, size:40
+2026-05-13 00:02:45, EXEC, v:1, k:ed@priminhos, mode:FULL, rate:100, size:47
+2026-05-13 00:02:47, MOVE, v:1, k:ed@priminhos, mode:BACK
+2026-05-13 00:03:13, SELF, v:1, k:ed@priminhos, self:1, rate:100, study:20, refactor:1
+2026-05-13 00:03:45, MOVE, v:1, k:ed@wordsearch, mode:DOWN
+2026-05-13 00:03:47, MOVE, v:1, k:ed@wordsearch, mode:PICK
+2026-05-13 00:26:09, EXEC, v:1, k:ed@wordsearch, mode:FULL, rate:100, size:89
+2026-05-13 00:26:12, MOVE, v:1, k:ed@wordsearch, mode:BACK
+2026-05-13 00:26:36, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-05-13 00:26:37, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-13 00:26:38, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-13 00:26:48, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:15
+2026-05-13 00:26:50, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-05-13 00:26:55, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-05-13 01:00:23, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-05-13 01:02:03, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:33
+2026-05-13 01:02:22, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:33
+2026-05-13 01:02:23, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-05-13 01:02:39, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:20
+2026-05-13 01:03:11, MOVE, v:1, k:ed@distancia, mode:DOWN
+2026-05-13 01:03:12, MOVE, v:1, k:ed@distancia, mode:PICK
+2026-05-13 01:03:14, EXEC, v:1, k:ed@distancia, mode:FULL, rate:0, size:5
+2026-05-13 01:30:17, EXEC, v:1, k:ed@distancia, mode:FULL, rate:14, size:53
