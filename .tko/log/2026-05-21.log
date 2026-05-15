@@ -1,0 +1,6 @@
+2026-05-21 08:48:44, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-21 08:48:47, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-05-21 08:48:51, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-21 08:49:02, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-05-21 08:49:06, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:60
+2026-05-21 08:49:12, MOVE, v:1, k:ed@lista_d2, mode:BACK
