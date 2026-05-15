@@ -32,8 +32,33 @@
         },
         {
             "label": "2026-04-07_11-45-16",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(x int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif x == 2 {\n\t\treturn true\n\t}\n\tif x%2-1 != 0 {\n\t\treturn false\n\t}\n\n\teh_primo(x / 2)\n\treturn true\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\ts := make([]int, n)\n\taux := 0\n\tfor i := 0; aux < n; i++ {\n\t\tif eh_primo(i) {\n\t\t\ts[aux] = i\n\t\t\taux++\n\t\t}\n\t}\n\tfmt.Println(s)\n\treturn\n}\n",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Afu\n@@ -339,116 +339,13 @@\n rint\n-f(%22%5B%22)%0A%09for _, i := range s %7B%0A%09%09if i == n %7B%0A%09%09%09fmt.Printf(%22%25d%5D%22, i)%0A%09%09%09return%0A%09%09%7D%0A%09%09fmt.Printf(%22%25d, %22, i)%0A%09%7D\n+ln(s)\n %0A%09re\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-05-12_23-58-46",
+            "content": "@@ -381,18 +381,16 @@\n f i == n\n--1\n  %7B%0A%09%09%09fm\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-12_23-59-03",
+            "content": "@@ -384,14 +384,11 @@\n  == \n-len(s)\n+n-1\n  %7B%0A%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-12_23-59-55",
+            "content": "@@ -121,18 +121,20 @@\n %0A%09if x%252\n- =\n+-1 !\n = 0 %7B%0A%09%09\n@@ -155,77 +155,23 @@\n %7D%0A%0A%09\n-for i := 3; i*i %3C= x; i += 2 %7B%0A%09%09if x%25i == 0 %7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D\n+eh_primo(x / 2)\n %0A%09re\n@@ -253,17 +253,16 @@\n ux := 0%0A\n-%0A\n %09for i :\n@@ -334,30 +334,138 @@\n %0A%09%7D%0A\n-%0A%09fmt.Printf(%22%25v%5Cn%22, s)\n+%09fmt.Printf(%22%5B%22)%0A%09for _, i := range s %7B%0A%09%09if i == len(s) %7B%0A%09%09%09fmt.Printf(%22%25d%5D%22, i)%0A%09%09%09return%0A%09%09%7D%0A%09%09fmt.Printf(%22%25d, %22, i)%0A%09%7D%0A%09return\n %0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-13_00-01-01",
+            "content": "@@ -401,129 +401,16 @@\n tf(%22\n-%5B%22)%0A%09for i, val := range s %7B%0A%09%09if i == len(s)-1 %7B%0A%09%09%09fmt.Printf(%22%25d%5D%5Cn%22, val)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d, %22, val)%0A%09%09%7D%0A%09%7D\n+%25v%5Cn%22, s)\n %0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-05-13_00-02-45",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc eh_primo(x int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tif x == 2 {\n\t\treturn true\n\t}\n\tif x%2 == 0 {\n\t\treturn false\n\t}\n\n\tfor i := 3; i*i <= x; i += 2 {\n\t\tif x%i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\ts := make([]int, n)\n\taux := 0\n\n\tfor i := 0; aux < n; i++ {\n\t\tif eh_primo(i) {\n\t\t\ts[aux] = i\n\t\t\taux++\n\t\t}\n\t}\n\n\tfmt.Printf(\"[\")\n\tfor i, val := range s {\n\t\tif i == len(s)-1 {\n\t\t\tfmt.Printf(\"%d]\\n\", val)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d, \", val)\n\t\t}\n\t}\n}\n",
+            "lines": "47"
         }
     ]
 }

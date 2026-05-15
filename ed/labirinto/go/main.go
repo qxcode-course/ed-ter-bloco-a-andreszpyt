@@ -22,9 +22,22 @@ func match(grid [][]rune, p Pos, value rune) bool {
 	return inside(grid, p) && grid[p.l][p.c] == value
 }
 
-// Função recursiva que tenta encontrar o caminho do início ao fim
-func search(grid [][]rune, startPos, endPos Pos) bool {
-	_, _, _ = grid, startPos, endPos
+func search(grid [][]rune, curr Pos, endPos Pos) bool {
+	if curr == endPos {
+		grid[curr.l][curr.c] = '.'
+		return true
+	}
+
+	grid[curr.l][curr.c] = '.'
+
+	for _, next := range getNeig(curr) {
+		if match(grid, next, ' ') {
+			if search(grid, next, endPos) {
+				return true
+			}
+		}
+	}
+	grid[curr.l][curr.c] = ' '
 
 	return false
 }
