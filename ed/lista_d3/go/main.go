@@ -44,7 +44,6 @@ func (l *LList) insertBefore(mark *Node, value int) {
 	mark.prev = n
 }
 
-
 func str2list(serial string) *LList {
 	serial = serial[1 : len(serial)-1]
 	ll := NewLList()
@@ -77,33 +76,48 @@ func main() {
 
 		switch cmd {
 		case "compare":
-			// lla := str2list(args[1])
-			// llb := str2list(args[2])
-			// if equals(lla, llb) {
-			// 	fmt.Println("iguais")
-			// } else {
-			// 	fmt.Println("diferentes")
-			// }
+			lla := str2list(args[1])
+			llb := str2list(args[2])
+			if equals(lla, llb) {
+				fmt.Println("iguais")
+			} else {
+				fmt.Println("diferentes")
+			}
 		case "addsorted":
-			// lla := NewLList()
-			// for i := 1; i < len(args); i++ {
-			// 	value, _ := strconv.Atoi(args[i])
-			// 	addsorted(lla, value)
-			// }
-			// fmt.Println(lla)
+			lla := NewLList()
+			for i := 1; i < len(args); i++ {
+				value, _ := strconv.Atoi(args[i])
+				addsorted(lla, value)
+			}
+			fmt.Println(lla)
 		case "reverse":
-			// lla := str2list(args[1])
-			// reverse(lla)
-			// fmt.Println(lla)
+			lla := str2list(args[1])
+			reverse(lla)
+			fmt.Println(lla)
 		case "merge":
-			// lla := str2list(args[1])
-			// llb := str2list(args[2])
-			// merged := merge(lla, llb)
-			// fmt.Println(merged)
+			lla := str2list(args[1])
+			llb := str2list(args[2])
+			merged := merge(lla, llb)
+			fmt.Println(merged)
 		case "end":
 			return
 		default:
 			fmt.Println("fail: comando invalido")
 		}
 	}
+}
+
+func equals(lla *LList, llb *LList) bool {
+	if lla.size != llb.size || lla.root != llb.root {
+		return false
+	}
+
+	for i := 0; i != lla.size; i++ {
+		lla.root = lla.root.next
+		llb.root = llb.root.next
+		if lla.root.Value != llb.root.Value {
+			return false
+		}
+	}
+	return true
 }

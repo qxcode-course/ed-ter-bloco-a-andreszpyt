@@ -7,8 +7,23 @@
         },
         {
             "label": "2026-05-13_01-30-17",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar seq string\n\tvar l int\n\tfmt.Scan(&seq, &l)\n\n\ts := []byte(seq)\n\n\tvar dfs func(idx int) bool\n\tdfs = func(idx int) bool {\n\t\tif idx == len(s) {\n\t\t\treturn true\n\t\t}\n\n\t\tif s[idx] != '.' {\n\t\t\treturn dfs(idx + 1)\n\t\t}\n\n\t\tfor d := 0; d <= l; d++ {\n\t\t\tchar := byte('0' + d)\n\t\t\tpode := true\n\n\t\t\tinicio := idx - l\n\t\t\tif inicio < 0 {\n\t\t\t\tinicio = 0\n\t\t\t}\n\t\t\tfor i := inicio; i < idx; i++ {\n\t\t\t\tif s[i] == char {\n\t\t\t\t\tpode = false\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif pode {\n\t\t\t\ts[idx] = char\n\t\t\t\tif dfs(idx + 1) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t\ts[idx] = '.'\n\t\t\t}\n\t\t}\n\n\t\treturn false\n\t}\n\n\tdfs(0)\n\tfmt.Println(string(s))\n}\n",
+            "content": "@@ -582,204 +582,8 @@\n %09%09%09%7D\n-%0A%0A%09%09%09if pode %7B%0A%09%09%09%09fim := idx + l%0A%09%09%09%09if fim == len(s)-1 %7B%0A%09%09%09%09%09fim = len(s) - 1%0A%09%09%09%09%7D%0A%09%09%09%09for i := idx + 1; i %3C= fim; i++ %7B%0A%09%09%09%09%09if s%5Bi%5D == char %7B%0A%09%09%09%09%09%09pode = false%0A%09%09%09%09%09%09break%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D\n %0A%09%09%7D\n",
             "lines": "53"
+        },
+        {
+            "label": "2026-05-25_15-46-11",
+            "content": "@@ -473,32 +473,131 @@\n eak%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%0A\n+%09%09%09if pode %7B%0A%09%09%09%09s%5Bidx%5D = char%0A%09%09%09%09if dfs(idx + 1) %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%09s%5Bidx%5D = '.'%0A%09%09%09%7D%0A%0A\n %09%09%09if pode %7B%0A%09%09%09\n@@ -779,108 +779,8 @@\n %09%09%7D%0A\n-%0A%09%09%09if pode %7B%0A%09%09%09%09s%5Bidx%5D = char%0A%09%09%09%09if dfs(idx + 1) %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%09s%5Bidx%5D = '.'%0A%09%09%09%7D%0A%0A\n %09%09%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-25_15-47-00",
+            "content": "@@ -528,9 +528,10 @@\n fim \n-%3E\n+==\n  len\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-05-25_15-47-46",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar seq string\n\tvar l int\n\tfmt.Scan(&seq, &l)\n\n\ts := []byte(seq)\n\n\tvar dfs func(idx int) bool\n\tdfs = func(idx int) bool {\n\t\tif idx == len(s) {\n\t\t\treturn true\n\t\t}\n\n\t\tif s[idx] != '.' {\n\t\t\treturn dfs(idx + 1)\n\t\t}\n\n\t\tfor d := 0; d <= l; d++ {\n\t\t\tchar := byte('0' + d)\n\t\t\tpode := true\n\n\t\t\tinicio := idx - l\n\t\t\tif inicio < 0 {\n\t\t\t\tinicio = 0\n\t\t\t}\n\t\t\tfor i := inicio; i < idx; i++ {\n\t\t\t\tif s[i] == char {\n\t\t\t\t\tpode = false\n\t\t\t\t\tbreak\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif pode {\n\t\t\t\tfim := idx + l\n\t\t\t\tif fim > len(s)-1 {\n\t\t\t\t\tfim = len(s) - 1\n\t\t\t\t}\n\t\t\t\tfor i := idx + 1; i <= fim; i++ {\n\t\t\t\t\tif s[i] == char {\n\t\t\t\t\t\tpode = false\n\t\t\t\t\t\tbreak\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tif pode {\n\t\t\t\ts[idx] = char\n\t\t\t\tif dfs(idx + 1) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t\ts[idx] = '.'\n\t\t\t}\n\n\t\t}\n\n\t\treturn false\n\t}\n\n\tdfs(0)\n\tfmt.Println(string(s))\n}\n",
+            "lines": "67"
         }
     ]
 }

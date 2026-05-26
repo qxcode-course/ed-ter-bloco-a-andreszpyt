@@ -1,0 +1,4 @@
+2026-05-22 00:00:47, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-22 00:01:57, MOVE, v:1, k:ed@lista_d3, mode:PICK
+2026-05-22 00:01:59, EXEC, v:1, k:ed@lista_d3, mode:FULL, rate:0, size:109
+2026-05-22 00:15:07, MOVE, v:1, k:ed@lista_d3, mode:BACK

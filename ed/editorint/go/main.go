@@ -20,9 +20,9 @@ func (e *Editor) InsertChar(r rune) {
 }
 
 func (e *Editor) KeyLeft() {
-	if e.it_char.Prev() != e.it_line.Value.End() {
+	if e.it_char != e.it_line.Value.Front() {
 		e.it_char = e.it_char.Prev() // Move o cursor para a esquerda
-	} else {
+	} else if e.it_line != e.texto.Front() {
 		e.it_line = e.it_line.Prev()
 		e.it_char = e.it_line.Value.End()
 	}
@@ -59,8 +59,20 @@ func (e *Editor) KeyDown() {
 }
 
 func (e *Editor) KeyBackspace() {
-	e.it_char = e.it_line.Value.Erase(e.it_char.Value)
-	e.it_char = e.it_char.Prev()
+	if e.it_char != e.it_line.Value.Front() {
+		nodeErase := e.it_line.Prev()
+		e.it_line.Value.EraseNode(nodeErase)
+	} else if e.it_line != e.texto.Front() {
+		line := e.it_line.Value
+		e.it_line = e.it_line.Prev()
+		e.it_char = e.it_line.Value.End()
+
+		for n := line.Front(); n != line.End(); n = n.Next() {
+			e.it_line.Value.PushBack(n.Value)
+		}
+		lineRemove := e.it_line.Next()
+		e.texto.EraseNode(lineRemove)
+	}
 }
 
 func (e *Editor) KeyDelete() {

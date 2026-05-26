@@ -85,14 +85,22 @@ func subseq(vet []int, seq []int) int {
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	newVet := make([]int, len(vet))
+	for i := 0; i < len(vet); i++ {
+		isPresent := false
+		for j := 0; j < len(posList); j++ {
+			if j == i {
+				isPresent = true
+			}
+		}
+		if !isPresent {
+			newVet = append(newVet, vet[i])
+		}
+	}
+	return newVet
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
 	return nil
 }
 

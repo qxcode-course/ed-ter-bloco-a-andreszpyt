@@ -1,0 +1,26 @@
+2026-05-24 00:12:19, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:12:19, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:29:57, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:29:57, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:35:09, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:35:09, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:40:13, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:40:13, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:42:08, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:42:08, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:50:10, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:50:10, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:52:41, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:52:41, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 01:00:00, EXEC, v:1, k:ed@editor, mode:FULL, rate:100, size:76
+2026-05-24 01:00:07, MOVE, v:1, k:ed@editor, mode:BACK
+2026-05-24 00:59:57, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 00:59:57, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-05-24 01:00:37, SELF, v:1, k:ed@editor, self:1, rate:100, study:120, concept:1
+2026-05-24 01:00:47, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-24 01:00:50, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-24 01:00:53, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-24 01:20:24, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-05-24 01:20:28, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-24 01:21:35, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-24 01:27:12, MOVE, v:1, k:ed@cercado, mode:BACK

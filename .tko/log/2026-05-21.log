@@ -4,3 +4,20 @@
 2026-05-21 08:49:02, MOVE, v:1, k:ed@lista_d2, mode:PICK
 2026-05-21 08:49:06, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:60
 2026-05-21 08:49:12, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-05-21 09:10:35, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-05-21 09:10:38, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-05-21 09:10:40, MOVE, v:1, k:ed@prin_list1, mode:BACK
+2026-05-21 14:03:49, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-05-21 21:17:18, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 22:17:25, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 22:17:27, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-05-21 22:46:23, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-05-21 22:46:29, MOVE, v:1, k:ed@pintura, mode:DOWN
+2026-05-21 22:46:31, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-21 22:46:29, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-21 22:46:29, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-21 22:46:29, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-05-21 23:00:28, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-21 23:00:31, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-05-21 23:40:04, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-05-21 23:40:07, MOVE, v:1, k:ed@cercado, mode:PICK

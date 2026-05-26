@@ -37,12 +37,26 @@ func main() {
 			}
 
 			if pode {
+				fim := idx + l
+				if fim > len(s)-1 {
+					fim = len(s) - 1
+				}
+				for i := idx + 1; i <= fim; i++ {
+					if s[i] == char {
+						pode = false
+						break
+					}
+				}
+			}
+
+			if pode {
 				s[idx] = char
 				if dfs(idx + 1) {
 					return true
 				}
 				s[idx] = '.'
 			}
+
 		}
 
 		return false

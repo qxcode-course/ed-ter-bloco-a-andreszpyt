@@ -12,12 +12,12 @@ type Node[T any] struct {
 	root  *Node[T]
 }
 
-// Retorna o próximo nó
+// Next Retorna o próximo nó
 func (n *Node[T]) Next() *Node[T] {
 	return n.next
 }
 
-// Retorna o nó anterior
+// Prev Retorna o nó anterior
 func (n *Node[T]) Prev() *Node[T] {
 	return n.prev
 }
@@ -85,6 +85,29 @@ func (l *List[T]) Erase(n *Node[T]) *Node[T] {
 	n.next.prev = n.prev
 	l.size--
 	return n.next
+}
+
+func (l *List[T]) EraseNode(node *Node[T]) {
+	if node == nil {
+		return
+	}
+
+	if node == l.End() {
+		return
+	}
+
+	prev := node.Prev()
+	next := node.Next()
+
+	if prev != nil {
+		prev.next = next
+	}
+	if next != nil {
+		next.prev = prev
+	}
+
+	node.prev = nil
+	node.next = nil
 }
 
 func (l *List[T]) IndexOf(n *Node[T]) int {

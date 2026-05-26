@@ -6,141 +6,27 @@ sources:
   type: local
   writeable: true
   quests: null
-  tasks: null
 - name: ed
   target: https://github.com/qxcodeed/arcade.git
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 - name: eval1
   target: https://github.com/senapk/eval_26_ed_1
   index: README.md
   type: git
   writeable: false
   quests: null
-  tasks: null
 expanded:
+- ed@rec
 - ed@list
-tasks:
-  ed@pintando: '{self:1, rate:100, study:20, concept:1}'
-  ed@mumia: '{self:1, rate:100, study:20, concept:1}'
-  ed@fuga: '{self:1, rate:100, study:25}'
-  ed@pedra: '{self:1, rate:100, study:20, concept:1}'
-  ed@casais: '{self:1, rate:100, study:15}'
-  ed@baruel: '{self:1, rate:100, study:25}'
-  ed@gomos: '{self:1, rate:100, study:50, concept:1}'
-  ed@princesa: '{self:1, rate:100, study:60, concept:1}'
-  ed@apagando: '{self:1, rate:100, study:50}'
-  ed@manipulacao: '{self:1, rate:100, study:90}'
-  ed@especiais: '{rate:12}'
-  ed@triangulo: '{self:1, rate:100, study:30, concept:1}'
-  ed@treinando: '{self:1, rate:100, study:60, concept:1, debug:1}'
-  ed@resto: '{self:1, rate:100, study:15}'
-  ed@mdc: '{self:1, rate:100, study:10, refactor:1}'
-  ed@queimada: '{self:1, rate:100, study:12}'
-  ed@labirinto: '{self:1, rate:100, study:30, concept:1, refactor:1}'
-  ed@eh_primo: '{self:1, rate:100, study:10}'
-  ed@vetequals: '{self:1, rate:100, study:20, concept:1, debug:1}'
-  ed@priminhos: '{self:1, rate:100, study:20, refactor:1}'
-  ed@wordsearch: '{self:1, rate:100, study:15}'
-  ed@subset_sum: '{self:1, rate:100, study:20}'
-  ed@distancia: '{rate:14}'
-  ed@vetbuild: '{self:1, rate:100, study:30, concept:1, problem:1, refactor:1}'
-  ed@setbuild: '{self:1, rate:100, study:110, concept:1, refactor:1}'
-  ed@bettersearch: '{self:1, rate:100, study:60, debug:1}'
-  ed@multiset: '{self:1, rate:100, study:60, concept:1, refactor:1}'
-  ed@lista_d1: '{self:1, rate:100, study:30, refactor:1}'
-  ed@lista_d2: '{rate:60}'
-  ed@lista_d4: '{self:1, rate:100, study:60, refactor:1}'
-  ed@ilhas: '{self:1, rate:100, study:20}'
-  ed@cercado: '{rate:33}'
-  eval1@baruel: '{rate:25}'
-  eval1@apagando: '{self:1, rate:100}'
-  eval1@casais: '{self:1, rate:100}'
-  eval1@triangulo: '{self:1, rate:100}'
-  ed@analise: '{}'
-  ed@buscas: '{}'
-  ed@rotacoes: '{}'
-  ed@alternando: '{}'
-  ed@recursao: '{}'
-  ed@enesimo: '{}'
-  ed@escada: '{}'
-  ed@binomiais: '{}'
-  ed@diagonal: '{}'
-  ed@sufixos: '{}'
-  ed@padroes1: '{}'
-  ed@padroes2: '{}'
-  ed@padroes3: '{}'
-  ed@quadrado: '{}'
-  ed@fib1: '{}'
-  ed@fib2: '{}'
-  ed@santo: '{}'
-  ed@bitcoin: '{}'
-  ed@fractais_png: '{}'
-  ed@permutacoes: '{}'
-  ed@sudoku: '{}'
-  ed@n_rainhas: '{}'
-  ed@magicsearch: '{}'
-  ed@iterador: '{}'
-  ed@prin_list1: '{}'
-  ed@lista_d3: '{}'
-  ed@prin_list2: '{}'
-  ed@editor: '{}'
-  ed@controlz: '{}'
-  ed@editorint: '{}'
-  ed@bufferring: '{}'
-  ed@fila_enc: '{}'
-  ed@pilha: '{}'
-  ed@chaves: '{}'
-  ed@queimando: '{}'
-  ed@pilhado: '{}'
-  ed@balanceada: '{}'
-  ed@caminhao: '{}'
-  ed@polonesa: '{}'
-  ed@serial: '{}'
-  ed@formatada: '{}'
-  ed@inverter: '{}'
-  ed@clonar: '{}'
-  ed@soma: '{}'
-  ed@altura: '{}'
-  ed@compare: '{}'
-  ed@arvore-path: '{}'
-  ed@bst_insert: '{}'
-  ed@bst_serial: '{}'
-  ed@bst_remove: '{}'
-  ed@dfs_read: '{}'
-  ed@pintura: '{}'
-  ed@longest: '{}'
-  ed@battleship: '{}'
-  ed@rotten: '{}'
-  ed@caminho: '{}'
-  ed@detonate: '{}'
-  ed@escapeSpread: '{}'
-  ed@intro_cpp: '{}'
-  ed@busca: '{}'
-  ed@ordenacao: '{}'
-  ed@recsort: '{}'
-  ed@vacina: '{}'
-  ed@indices: '{}'
-  ed@tapioca: '{}'
-  ed@mergevet: '{}'
-  ed@hex: '{}'
-  ed@sob_operadores: '{}'
-  ed@fracao: '{}'
-  ed@fracaoGo: '{}'
-  ed@lista_simples: '{}'
-  ed@cauda: '{}'
-  ed@concatenar: '{}'
-  ed@banco: '{}'
-  ed@sobrecarga: '{}'
-  eval1@queimada: '{}'
 flags:
   inbox: inbox
-  panel: help
-  show_panel: 'false'
-  task_graph_mode: time
+  panel: graph
+  show_panel: 'true'
+  task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@list
+selected: ed@lista_d3
+selected_index: 16

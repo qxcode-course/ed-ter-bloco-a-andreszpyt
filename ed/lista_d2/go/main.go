@@ -136,13 +136,12 @@ func (ll *LinkedList) Insert(node *Node, value int) {
 	newNode.next = node
 	newNode.prev = node.prev
 
-	if node.next != nil {
+	if node.prev != nil {
 		node.prev.next = newNode
 	} else {
-		ll.tail = newNode
+		ll.root = newNode
 	}
-
-	node.next = newNode
+	node.prev = newNode
 }
 
 func (ll *LinkedList) Remove(node *Node) {
