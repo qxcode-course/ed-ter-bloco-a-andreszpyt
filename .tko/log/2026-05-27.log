@@ -1,0 +1,18 @@
+2026-05-27 16:17:26, MOVE, v:1, k:ed@prin_list2, mode:DOWN
+2026-05-27 16:17:30, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-05-27 16:17:26, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-27 16:17:26, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-27 16:17:26, MOVE, v:1, k:ed@prin_list2, mode:EDIT
+2026-05-27 18:52:46, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-05-27 18:53:07, MOVE, v:1, k:ed@prin_list2, mode:PICK
+2026-05-27 18:53:14, MOVE, v:1, k:ed@prin_list2, mode:BACK
+2026-05-27 19:01:34, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-05-27 19:01:36, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-27 19:01:34, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-27 19:01:34, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-27 19:01:34, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-27 19:01:34, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-05-27 19:07:56, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:110
+2026-05-27 19:26:33, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-05-27 21:40:27, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-05-27 21:59:03, MOVE, v:1, k:ed@bufferring, mode:BACK

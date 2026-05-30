@@ -110,6 +110,29 @@ func (l *List[T]) EraseNode(node *Node[T]) {
 	node.next = nil
 }
 
+func (l *List[T]) EraseLine(node Node[*List[rune]]) {
+	if node.Value == nil {
+		return
+	}
+
+	if node == l.Front() {
+		return
+	}
+
+	prev := node.Prev()
+	next := node.Next()
+
+	if prev != nil {
+		prev.next = next
+	}
+	if next != nil {
+		next.prev = prev
+	}
+
+	node.prev = nil
+	node.next = nil
+}
+
 func (l *List[T]) IndexOf(n *Node[T]) int {
 	if n == l.root {
 		return l.size

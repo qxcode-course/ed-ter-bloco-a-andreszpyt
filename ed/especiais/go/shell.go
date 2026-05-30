@@ -41,8 +41,8 @@ func occurr(vet []int) []Pair {
 
 func teams(vet []int) []Pair {
 	count := make(map[int]int)
-	for i := 0; i < len(vet); i++ {
-		if i < len(vet) && vet[i+1] == vet[i] {
+	for i := 0; i < len(vet)-1; i++ {
+		if vet[i+1] == vet[i] {
 			count[vet[i]]++
 		}
 	}
@@ -57,18 +57,43 @@ func teams(vet []int) []Pair {
 }
 
 func mnext(vet []int) []int {
-	_ = vet
-	return nil
+	for i := 0; i < len(vet); i++ {
+		if vet[i] >= 0 && (vet[i-1] < 0 || vet[i+1] < 0) {
+			vet[i] = 1
+		}
+	}
+	return vet
 }
 
 func alone(vet []int) []int {
-	_ = vet
-	return nil
+	alone := make([]int, 0)
+	for i := 0; i < len(vet); i++ {
+		if vet[i] >= 0 && !(vet[i-1] < 0 || vet[i+1] < 0) {
+			alone = append(alone, vet[i])
+		}
+	}
+	return alone
 }
 
 func couple(vet []int) int {
-	_ = vet
-	return 0
+	count := make(map[int]int)
+	for _, v := range vet {
+		count[v]++
+	}
+
+	couples := 0
+	for k, v := range count {
+		if k > 0 {
+			if negV, exists := count[-k]; exists {
+				if v < negV {
+					couples += v
+				} else {
+					couples += negV
+				}
+			}
+		}
+	}
+	return couples
 }
 
 func hasSubseq(vet []int, seq []int, pos int) bool {
@@ -79,17 +104,23 @@ func hasSubseq(vet []int, seq []int, pos int) bool {
 }
 
 func subseq(vet []int, seq []int) int {
-	_ = vet
-	_ = seq
+	if len(seq) == 0 {
+		return 0
+	}
+	for i := 0; i <= len(vet)-len(seq); i++ {
+		if hasSubseq(vet, seq, i) {
+			return i
+		}
+	}
 	return -1
 }
 
 func erase(vet []int, posList []int) []int {
-	newVet := make([]int, len(vet))
+	newVet := make([]int, 0)
 	for i := 0; i < len(vet); i++ {
 		isPresent := false
 		for j := 0; j < len(posList); j++ {
-			if j == i {
+			if posList[j] == i {
 				isPresent = true
 			}
 		}
@@ -101,7 +132,13 @@ func erase(vet []int, posList []int) []int {
 }
 
 func clear(vet []int, value int) []int {
-	return nil
+	newVet := make([]int, 0)
+	for i := 0; i < len(vet); i++ {
+		if vet[i] != value {
+			newVet = append(newVet, vet[i])
+		}
+	}
+	return newVet
 }
 
 func main() {
