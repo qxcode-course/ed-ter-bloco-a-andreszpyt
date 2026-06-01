@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_00-10-58",
+            "content": "@@ -172,37 +172,7 @@\n &c)%0A\n-%09fmt.Printf(%22%25d%5Cn%22, dfs(n, c))\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_00-11-25",
+            "content": "@@ -44,15 +44,11 @@\n nt) \n-float64\n+int\n  %7B%0A%09\n@@ -186,10 +186,8 @@\n f(%22%25\n-.2\n d%5Cn%22\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_00-12-04",
+            "content": "@@ -35,23 +35,19 @@\n fs(n, c \n-float64\n+int\n ) float6\n@@ -59,18 +59,16 @@\n sum := 0\n-.0\n %0A%09for i \n@@ -74,10 +74,8 @@\n  := \n-0.\n 0; i\n@@ -111,10 +111,8 @@\n /= 2\n-.0\n %0A%09%7D%0A\n@@ -150,23 +150,19 @@\n ar n, c \n-float64\n+int\n %0A%09fmt.Sc\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_00-13-33",
+            "content": "@@ -31,20 +31,16 @@\n nc dfs(n\n- int\n , c floa\n@@ -76,16 +76,18 @@\n or i := \n+0.\n 0; i %3C n\n@@ -160,17 +160,9 @@\n ar n\n- int%0A%09var\n+,\n  c f\n@@ -202,17 +202,17 @@\n ntf(%22%25.2\n-f\n+d\n %5Cn%22, dfs\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-01_00-15-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc dfs(n int, c float64) float64 {\n\tsum := 0.0\n\tfor i := 0; i < n; i++ {\n\t\tsum += c\n\t\tsum /= 2.0\n\t}\n\treturn sum\n}\n\nfunc main() {\n\tvar n int\n\tvar c float64\n\tfmt.Scan(&n, &c)\n\tfmt.Printf(\"%.2f\\n\", dfs(n, c))\n}\n",
+            "lines": "19"
+        }
+    ]
+}
