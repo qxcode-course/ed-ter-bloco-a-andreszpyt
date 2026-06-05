@@ -10,9 +10,28 @@ import (
 
 // Não modifique a assinatura da função floodFill
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
-	//
-	_ := image
-	return 0
+
+	cor := image[sr][sc]
+
+	if cor == color {
+		return image
+	}
+
+	dfs(image, sr, sc, cor, color)
+	return image
+}
+
+func dfs(board [][]int, i, j int, cor int, color int) {
+	if i < 0 || i >= len(board) || j < 0 || j >= len(board[0]) || board[i][j] != cor {
+		return
+	}
+
+	board[i][j] = color
+
+	dfs(board, i-1, j, cor, color)
+	dfs(board, i+1, j, cor, color)
+	dfs(board, i, j-1, cor, color)
+	dfs(board, i, j+1, cor, color)
 }
 
 // Não modifique a função main

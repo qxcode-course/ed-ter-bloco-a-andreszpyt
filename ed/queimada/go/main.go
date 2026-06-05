@@ -25,7 +25,6 @@ func burnTrees(grid [][]rune, l, c int) {
 	burnTrees(grid, l-1, c)
 	burnTrees(grid, l, c-1)
 	burnTrees(grid, l, c+1)
-
 }
 
 func main() {

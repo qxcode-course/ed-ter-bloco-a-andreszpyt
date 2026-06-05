@@ -8,13 +8,37 @@ import (
 
 // NÃO ALTERE A ASSINATURA DA FUNÇÃO solve
 func solve(board [][]byte) {
-	for i := 0; i < len(board); i++ {
-		for j := 0; j < len(board[i]); j++ {
+
+	rows := len(board)
+	cols := len(board[0])
+
+	for i := 0; i < rows; i++ {
+		if board[i][0] == 'O' {
+			dfs(board, i, 0)
+		}
+		if board[i][cols-1] == 'O' {
+			dfs(board, i, cols-1)
+		}
+	}
+	for i := 0; i < cols; i++ {
+		if board[0][i] == 'O' {
+			dfs(board, 0, i)
+		}
+		if board[rows-1][i] == 'O' {
+			dfs(board, cols-1, i)
+		}
+	}
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
 			if board[i][j] == 'O' {
-				dfs(board, i, j)
+				board[i][j] = 'X'
+			}
+			if board[i][j] == 'Y' {
+				board[i][j] = 'O'
 			}
 		}
 	}
+
 }
 
 func dfs(board [][]byte, i int, j int) {
@@ -22,7 +46,7 @@ func dfs(board [][]byte, i int, j int) {
 		return
 	}
 
-	board[i][j] = 'X'
+	board[i][j] = 'Y'
 	dfs(board, i-1, j)
 	dfs(board, i+1, j)
 	dfs(board, i, j+1)

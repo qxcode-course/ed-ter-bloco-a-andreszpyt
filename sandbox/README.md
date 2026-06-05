@@ -9,3 +9,4 @@ Sinta-se à vontade para organizar seus rascunhos em subpastas dentro do sandbox
 
 <!--autoload_cluster=.-->
 
+- [ ] `@user_001 🛠️ 👤 type=make xp=1 tier=1 loss=part :self` [Digite o título da tarefa aqui](user_001/README.md)

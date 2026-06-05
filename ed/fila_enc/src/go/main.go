@@ -12,22 +12,55 @@ func (q *Queue[T]) Enqueue(value T) {
 	NewNode := &Node[T]{
 		Value: value,
 	}
-	q.tail.next = NewNode
-	q.tail = q.tail.next
+	if q.tail != nil {
+		q.tail.next = NewNode
+		q.tail = q.tail.next
+	} else {
+		q.head = NewNode
+		q.tail = NewNode
+	}
 }
 
 func (q *Queue[T]) Dequeue() (T, bool) {
-	if q.tail == nil {
-		q.head = q.head.next
-		return q.head.Value, true
+	if q.head == nil {
+		var v T
+		return v, false
 	}
-	return 0, false
+	dequeue := q.head
+	q.head = q.head.next
+	return dequeue.Value, true
 }
 
-// func (q *Queue[T]) Peek() (T, bool)
-// func (q *Queue[T]) Size() int
-// func (q *Queue[T]) IsEmpty() bool
-// func (q *Queue[T]) Clear()
+func (q *Queue[T]) Peek() (T, bool) {
+	if q.head == nil {
+		var v T
+		return v, false
+	}
+	return q.head.Value, true
+}
+
+func (q *Queue[T]) Size() int {
+	head := q.head
+	for i := 0; head != nil; i++ {
+		if head.next == q.tail {
+			return i
+		}
+		head = head.next
+	}
+	return -1
+}
+
+func (q *Queue[T]) IsEmpty() bool {
+	if q.head == nil {
+		return true
+	}
+	return false
+}
+
+func (q *Queue[T]) Clear() {
+	q.head = nil
+	q.tail = nil
+}
 
 type Node[T any] struct {
 	Value T
@@ -80,15 +113,15 @@ func main() {
 				queue.Enqueue(value)
 			}
 		case "pop":
-			// if _, ok := queue.Dequeue(); !ok {
-			// 	fmt.Println("falha: fila vazia")
-			// }
+			if _, ok := queue.Dequeue(); !ok {
+				fmt.Println("falha: fila vazia")
+			}
 		case "peek":
-			// if value, ok := queue.Peek(); ok {
-			// 	fmt.Println(value)
-			// } else {
-			// 	fmt.Println("falha: fila vazia")
-			// }
+			if value, ok := queue.Peek(); ok {
+				fmt.Println(value)
+			} else {
+				fmt.Println("falha: fila vazia")
+			}
 		default:
 			fmt.Println("Unknown command:", args[0])
 		}

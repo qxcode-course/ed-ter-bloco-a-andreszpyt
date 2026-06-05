@@ -9,9 +9,30 @@ import (
 )
 
 func longestIncreasingPath(matrix [][]int) int {
-	//
-	_ := matrix
-	return 0
+
+	cols, rows := len(matrix), len(matrix[0])
+
+	memo := make([][]int, rows)
+	for i := range memo {
+		memo[i] = make([]int, cols)
+	}
+
+	max := 0
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			atualMax := dfs(matrix, memo, i, j, -1)
+			if atualMax > max {
+				max = atualMax
+			}
+		}
+	}
+}
+
+func dfs(board [][]int, memo [][]int, i, j, valPrevio int) {
+	if i < 0 || j < 0 || i >= len(board) || j >= len(board[i]) || board[i][j] <= valPrevio {
+		return
+	}
+
 }
 
 // Não modifique a função main

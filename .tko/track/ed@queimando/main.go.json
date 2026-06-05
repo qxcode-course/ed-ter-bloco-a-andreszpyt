@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-03_02-29-33",
+            "content": "@@ -401,18 +401,21 @@\n %5D = 'o'%0A\n-%0A\n %09\n+%09%7D%0A%0A\n %09%09burnTr\n@@ -429,25 +429,24 @@\n d, l+1, cc)%0A\n-%09\n %09%09burnTrees(\n@@ -458,25 +458,24 @@\n  l-1, cc)%0A%09%09\n-%09\n burnTrees(gr\n@@ -489,17 +489,16 @@\n cc+1)%0A%09%09\n-%09\n burnTree\n@@ -514,20 +514,16 @@\n , cc-1)%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%7D%0A%0Af\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-03_02-29-48",
+            "content": "@@ -409,127 +409,115 @@\n %0A%09%09%09\n-stack.Push(Pos%7Bcl + \n+burnTrees(grid, l+\n 1, cc\n-%7D\n )%0A%09%09%09\n-stack.Push(Pos%7Bcl - \n+burnTrees(grid, l-\n 1, cc\n-%7D\n )%0A%09%09%09\n-stack.Push(Pos%7Bcl, cc + 1%7D)%0A%09%09%09stack.Push(Pos%7Bcl, cc - 1%7D\n+burnTrees(grid, l, cc+1)%0A%09%09%09burnTrees(grid, l, cc-1\n )%0A%09%09\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-03_02-33-43",
+            "content": "@@ -320,18 +320,18 @@\n  %7C%7C \n-cc\n+nr\n  %3C 0 %7C%7C \n cc %3C\n@@ -330,15 +330,15 @@\n  %7C%7C \n-cc %3C nr\n+nr %3C cl\n  %7B%0A%09\n@@ -366,18 +366,18 @@\n rid%5Bcl%5D%5B\n-cc\n+nr\n %5D == '#'\n@@ -391,18 +391,18 @@\n rid%5Bcl%5D%5B\n-cc\n+nr\n %5D = 'o'%0A\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-03_02-35-00",
+            "content": "@@ -308,18 +308,17 @@\n 0 %7C%7C cl \n-%3E=\n+%3C\n  nl %7C%7C c\n@@ -333,10 +333,9 @@\n  cc \n-%3E=\n+%3C\n  nr \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-03_02-39-10",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tr int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\n\tnl := len(grid)\n\tnr := len(grid[0])\n\n\tstack.Push(Pos{l, c})\n\n\tfor !stack.IsEmpty() {\n\t\tcurrent := stack.Pop()\n\t\tcl, cc := current.r, current.c\n\n\t\tif cl < 0 || cl >= nl || cc < 0 || cc >= nr {\n\t\t\tcontinue\n\t\t}\n\t\tif grid[cl][cc] == '#' {\n\t\t\tgrid[cl][cc] = 'o'\n\n\t\t\tstack.Push(Pos{cl + 1, cc})\n\t\t\tstack.Push(Pos{cl - 1, cc})\n\t\t\tstack.Push(Pos{cl, cc + 1})\n\t\t\tstack.Push(Pos{cl, cc - 1})\n\t\t}\n\t}\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "62"
+        }
+    ]
+}

@@ -2,16 +2,32 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 // mostra a lista com o elemento sword destacado
 func ToStr(l *DList[int], sword *DNode[int]) string {
-	return ""
+	var values []string
+
+	for i := l.root.next; i != l.root; i = i.next {
+		if i == sword {
+			values = append(values, fmt.Sprintf(">%d", i))
+		} else {
+			values = append(values, fmt.Sprintf("%d", i))
+		}
+	}
+
+	return "[" + strings.Join(values, ", ") + "]"
 }
 
 // move para frente na lista circular
 func Next(l *DList[int], it *DNode[int]) *DNode[int] {
-	return nil
+	nxt := it.next
+
+	if nxt == l.root {
+		nxt = nxt.next
+	}
+	return nxt
 }
 
 func main() {
