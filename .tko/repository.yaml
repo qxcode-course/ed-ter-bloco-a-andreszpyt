@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
+- ed@bfs
 flags:
   inbox: all
   panel: graph
@@ -27,5 +27,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@formatada
-selected_index: 10
+selected: ed@rotten
+selected_index: 12

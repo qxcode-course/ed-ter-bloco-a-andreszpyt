@@ -38,29 +38,29 @@ func (e *Editor) KeyEnter() {
 func (e *Editor) KeyRight() {
 	if e.it_char.Next() != e.it_line.Value.End() {
 		e.it_char = e.it_char.Next()
-	} else {
+	} else if e.it_line.Next() != e.texto.End() {
 		e.it_line = e.it_line.Next()
 		e.it_char = e.it_line.Value.Front()
 	}
 }
 
 func (e *Editor) KeyUp() {
-	if e.it_line.prev != nil {
+	if e.it_line != e.texto.Front() {
 		e.it_line = e.it_line.Prev()
-		e.it_char = e.it_line.Value.End()
-	} else {
-		return
+		e.it_char = e.it_line.Value.Front()
 	}
 }
 
 func (e *Editor) KeyDown() {
-	e.it_line = e.it_line.Next()
-	e.it_char = e.it_line.Value.Back()
+	if e.it_line.Next() != e.texto.End() {
+		e.it_line = e.it_line.Next()
+		e.it_char = e.it_line.Value.Front()
+	}
 }
 
 func (e *Editor) KeyBackspace() {
 	if e.it_char != e.it_line.Value.Front() {
-		nodeErase := e.it_line.Prev()
+		nodeErase := e.it_char.Prev()
 		e.it_line.Value.EraseNode(nodeErase)
 	} else if e.it_line != e.texto.Front() {
 		line := e.it_line.Value
@@ -74,7 +74,6 @@ func (e *Editor) KeyBackspace() {
 		e.texto.EraseNode(lineRemove)
 	}
 }
-
 func (e *Editor) KeyDelete() {
 
 }
