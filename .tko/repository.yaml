@@ -22,10 +22,14 @@ expanded:
 - ed@bfs
 flags:
   inbox: all
-  panel: graph
-  show_panel: 'true'
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
+audit_enabled: true
+audit_interval_seconds: null
 lang: go
-selected: ed@rotten
-selected_index: 12
+selected: ed@detonate
+selected_index: 13

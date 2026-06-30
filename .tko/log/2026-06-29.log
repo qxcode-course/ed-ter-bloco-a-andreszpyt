@@ -1,0 +1,21 @@
+2026-06-29 21:36:05, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-06-29 21:50:17, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-06-29 21:50:50, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-06-29 21:51:04, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-06-29 21:51:16, MOVE, v:1, k:ed@rotten, mode:PICK
+2026-06-29 22:05:38, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-29 22:10:38, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-29 22:14:55, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-29 22:20:29, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-29 22:25:23, EXEC, v:1, k:ed@rotten, mode:FULL, rate:66, size:69
+2026-06-29 22:25:19, MOVE, v:1, k:ed@rotten, mode:EDIT
+2026-06-29 22:31:46, EXEC, v:1, k:ed@rotten, mode:FULL, rate:100, size:70
+2026-06-29 22:31:48, MOVE, v:1, k:ed@rotten, mode:BACK
+2026-06-29 22:32:33, SELF, v:1, k:ed@rotten, self:1, rate:100, study:70, concept:1, debug:1
+2026-06-29 22:32:41, MOVE, v:1, k:ed@detonate, mode:DOWN
+2026-06-29 22:32:43, MOVE, v:1, k:ed@detonate, mode:PICK
+2026-06-29 22:32:41, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-29 22:32:41, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-29 22:32:41, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-29 22:32:41, MOVE, v:1, k:ed@detonate, mode:EDIT
+2026-06-29 23:05:24, MOVE, v:1, k:ed@detonate, mode:BACK

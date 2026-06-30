@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-29_22-25-23",
+            "content": "@@ -482,25 +482,25 @@\n %09if grid%5Br%5D%5B\n-c\n+r\n %5D == 2 %7B%0A%09%09%09\n@@ -731,29 +731,8 @@\n 0 %7B%0A\n-%09%09size := len(queue)%0A\n %09%09fo\n@@ -749,12 +749,18 @@\n i %3C \n-size\n+len(queue)\n ; i+\n@@ -1099,19 +1099,16 @@\n tes++%0A%0A%09\n-%7D%0A%0A\n %09if good\n@@ -1113,24 +1113,25 @@\n ods %3E 0 %7B%0A%09%09\n+%09\n return -1%0A%09%7D\n@@ -1124,24 +1124,29 @@\n %09%09return -1%0A\n+%09%09%7D%0A%0A\n %09%7D%0A%09return m\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-29_22-31-46",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m, &n)\n\tgrid := make([][]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tgrid[i] = make([]int, n)\n\t\tfor j := 0; j < n; j++ {\n\t\t\tfmt.Scan(&grid[i][j])\n\t\t}\n\t}\n\n\tresult := oranges(grid)\n\tfmt.Println(result)\n}\n\nfunc oranges(grid [][]int) interface{} {\n\tif len(grid) == 0 || len(grid[0]) == 0 {\n\t\treturn -1\n\t}\n\tm, n := len(grid), len(grid[0])\n\tgoods := 0\n\tqueue := [][]int{}\n\n\tfor r := 0; r < m; r++ {\n\t\tfor c := 0; c < n; c++ {\n\t\t\tif grid[r][c] == 2 {\n\t\t\t\tqueue = append(queue, []int{r, c})\n\t\t\t}\n\t\t\tif grid[r][c] == 1 {\n\t\t\t\tgoods++\n\t\t\t}\n\t\t}\n\t}\n\n\tif goods == 0 {\n\t\treturn 0\n\t}\n\tminutes := 0\n\tdirections := [][]int{{-1, 0}, {0, -1}, {0, 1}, {1, 0}}\n\n\tfor len(queue) > 0 && goods > 0 {\n\t\tsize := len(queue)\n\t\tfor i := 0; i < size; i++ {\n\t\t\tatual := queue[0]\n\t\t\tqueue = queue[1:]\n\t\t\tr, c := atual[0], atual[1]\n\n\t\t\tfor _, direction := range directions {\n\t\t\t\tnr, nc := r+direction[0], c+direction[1]\n\n\t\t\t\tif nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] == 1 {\n\t\t\t\t\tgrid[nr][nc] = 2\n\t\t\t\t\tgoods--\n\t\t\t\t\tqueue = append(queue, []int{nr, nc})\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tminutes++\n\n\t}\n\n\tif goods > 0 {\n\t\treturn -1\n\t}\n\treturn minutes\n}\n",
+            "lines": "70"
+        }
+    ]
+}
